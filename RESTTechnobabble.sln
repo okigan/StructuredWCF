@@ -5,6 +5,13 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WcfRestService1", "WcfRestS
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Contract", "Contract\Contract.csproj", "{D48E9995-7ACC-40BF-B13A-B62EF1BA278B}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Service", "Service\Service.csproj", "{ED14E3A1-6B97-4D27-A3A7-416EC5E7E72E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClientProxy", "ClientProxy\ClientProxy.csproj", "{E97C3E2C-1775-4BCA-94EA-980ECC856AEF}"
+	ProjectSection(ProjectDependencies) = postProject
+		{5C04D293-BD38-46F8-8084-2D5D917E510A} = {5C04D293-BD38-46F8-8084-2D5D917E510A}
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -19,6 +26,14 @@ Global
 		{D48E9995-7ACC-40BF-B13A-B62EF1BA278B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D48E9995-7ACC-40BF-B13A-B62EF1BA278B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D48E9995-7ACC-40BF-B13A-B62EF1BA278B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ED14E3A1-6B97-4D27-A3A7-416EC5E7E72E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ED14E3A1-6B97-4D27-A3A7-416EC5E7E72E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ED14E3A1-6B97-4D27-A3A7-416EC5E7E72E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ED14E3A1-6B97-4D27-A3A7-416EC5E7E72E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E97C3E2C-1775-4BCA-94EA-980ECC856AEF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E97C3E2C-1775-4BCA-94EA-980ECC856AEF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E97C3E2C-1775-4BCA-94EA-980ECC856AEF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E97C3E2C-1775-4BCA-94EA-980ECC856AEF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
