@@ -3,9 +3,11 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.ServiceModel.Web;
+using System.ServiceModel;
 
 namespace Contract {
-    interface IService1 {
+    [ServiceContract]
+    public interface IService1 {
         // TODO: Implement the collection resource that will contain the SampleItem instances
 
         [WebGet(UriTemplate = "")]
