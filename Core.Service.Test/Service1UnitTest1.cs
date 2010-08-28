@@ -3,9 +3,9 @@ using System.Text;
 using System.Collections.Generic;
 using System.Linq;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using Contract;
+using Core.Contract;
 
-namespace Service.Test {
+namespace Core.Service.Test {
     /// <summary>
     /// Summary description for UnitTest1
     /// </summary>

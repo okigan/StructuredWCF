@@ -11,7 +11,7 @@ namespace Host.ConsoleApp {
 
             try {
                 serviceHost = new ServiceHost(
-                    typeof(Service.Service1Web)
+                    typeof(Web.Service.Service1Web)
                  );
 
                 serviceHost.Open();
