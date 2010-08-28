@@ -5,11 +5,11 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProductVersion>8.0.30703</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{D7DC1C60-CDEA-4B45-A346-4D4232140A04}</ProjectGuid>
+    <ProjectGuid>{5AE4CD20-2366-433A-82E2-DA22BA144A74}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Contract</RootNamespace>
-    <AssemblyName>Contract</AssemblyName>
+    <RootNamespace>Service.Web</RootNamespace>
+    <AssemblyName>Service.Web</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -33,6 +33,8 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.ServiceModel.Web" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -40,9 +42,22 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="IService1.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="SampleItem.cs" />
+    <Compile Include="Service1.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Contract.Web\Contract.Web.csproj">
+      <Project>{D48E9995-7ACC-40BF-B13A-B62EF1BA278B}</Project>
+      <Name>Contract.Web</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Contract\Contract.csproj">
+      <Project>{D7DC1C60-CDEA-4B45-A346-4D4232140A04}</Project>
+      <Name>Contract</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Service\Service.csproj">
+      <Project>{ED14E3A1-6B97-4D27-A3A7-416EC5E7E72E}</Project>
+      <Name>Service</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

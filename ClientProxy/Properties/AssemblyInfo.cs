@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("Contract")]
+[assembly: AssemblyTitle("ClientProxy")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("XP")]
-[assembly: AssemblyProduct("Contract")]
+[assembly: AssemblyProduct("ClientProxy")]
 [assembly: AssemblyCopyright("Copyright © XP 2010")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("5d1f94f3-bf58-4d96-a034-04f59b297b7b")]
+[assembly: Guid("4339d9f2-75fe-4cf4-bbf8-1ec9251ffb40")]
 
 // Version information for an assembly consists of the following four values:
 //

@@ -8,10 +8,10 @@
   </TemplateData>
   <TemplateContent>
     <ProjectCollection>
-      <ProjectTemplateLink ProjectName="MathClassLib1">
+      <ProjectTemplateLink ProjectName="Technobabble.Service">
         Service\MyTemplate.vstemplate
       </ProjectTemplateLink>
-      <ProjectTemplateLink ProjectName="MathClassLib2">
+      <ProjectTemplateLink ProjectName="Technobabble.WcfService">
         WcfRestService1\MyTemplate.vstemplate
       </ProjectTemplateLink>
       <!--<SolutionFolder Name="Math Classes">
