@@ -11,7 +11,7 @@ namespace Host.WebApp {
 
         private void RegisterRoutes() {
             // Edit the base address of Service1 by replacing the "Service1" string below
-            RouteTable.Routes.Add(new ServiceRoute("Service1", new WebServiceHostFactory(), typeof(Service.Service1Web)));
+            RouteTable.Routes.Add(new ServiceRoute("Service1", new WebServiceHostFactory(), typeof(Web.Service.Service1Web)));
         }
     }
 }

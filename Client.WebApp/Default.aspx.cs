@@ -14,7 +14,7 @@ namespace Client.WebApp {
                 //    new ClientProxy.ServiceReference1.Service1Client("restendpointname");
                 //GridView1.DataSource = client.GetCollection();
 
-                var factory = new ChannelFactory<Contract.Web.IService1>("restendpointname");
+                var factory = new ChannelFactory<Web.Contract.IService1>("restendpointname");
                 var proxy = factory.CreateChannel();
                 var response = proxy.GetCollection();
                 ((IDisposable)proxy).Dispose();

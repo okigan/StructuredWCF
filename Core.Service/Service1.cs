@@ -1,23 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.ServiceModel;
-using System.ServiceModel.Activation;
-using System.ServiceModel.Web;
 using System.Text;
-using Contract;
+using Core.Contract;
 
-namespace Service {
-    // Start the service and browse to http://<machine_name>:<port>/Service1/help to view the service's generated help page
-    // NOTE: By default, a new instance of the service is created for each call; change the InstanceContextMode to Single if you want
-    // a single instance of the service to process all calls.	
-
-    [AspNetCompatibilityRequirements(RequirementsMode = AspNetCompatibilityRequirementsMode.Allowed)]
-    [ServiceBehavior(InstanceContextMode = InstanceContextMode.PerCall)]
-    // NOTE: If the service is renamed, remember to update the global.asax.cs file
-    // and/or the web.config and/or the corresponding *.svc file
+namespace Core.Service {
     public class Service1 : IService1 {
-        // TODO: Implement the collection resource that will contain the SampleItem instances
         static string[] babble = new string[] {
             "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
             ,"Integer at ligula sed sapien gravida vehicula."
@@ -57,7 +45,6 @@ namespace Service {
 
         Dictionary<int, string> data = new Dictionary<int,string>();
 
-
         public Service1() {
             for(int id = 0; id < babble.Length; id++) {
                 data.Add(id, babble[id]);
@@ -66,13 +53,11 @@ namespace Service {
 
         #region IService1 methods
         IList<SampleItem> IService1.GetCollection() {
-            // TODO: Replace the current implementation to return a collection of SampleItem instances
             IList<SampleItem> list = new List<SampleItem>();
             foreach(var b in data){
                 list.Add(new SampleItem() { Id = b.Key, StringValue = b.Value });
             }
             return list;
-
         }
 
         SampleItem IService1.Create(SampleItem instance) {
@@ -82,12 +67,7 @@ namespace Service {
         }
 
         SampleItem IService1.Get(int id) {
-            SampleItem item = new SampleItem();
-
-            int key = id;
-            item.Id = key;
-            item.StringValue = data[key];
-
+            SampleItem item = new SampleItem() { Id = id, StringValue = data[id] };
             return item;
         }
 
@@ -97,7 +77,6 @@ namespace Service {
             }
             
             data[id] = instance.StringValue;
-            
             instance.Id = id;
 
             return instance;

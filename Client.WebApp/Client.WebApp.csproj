@@ -134,13 +134,9 @@
     <Content Include="Site.Master" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\ClientProxy\ClientProxy.csproj">
-      <Project>{E97C3E2C-1775-4BCA-94EA-980ECC856AEF}</Project>
-      <Name>ClientProxy</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Contract.Web\Contract.Web.csproj">
+    <ProjectReference Include="..\Web.Contract\Web.Contract.csproj">
       <Project>{D48E9995-7ACC-40BF-B13A-B62EF1BA278B}</Project>
-      <Name>Contract.Web</Name>
+      <Name>Web.Contract</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
