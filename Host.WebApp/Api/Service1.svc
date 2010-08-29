@@ -1,5 +1,5 @@
 ﻿<%@ ServiceHost 
     Language="C#" 
     Debug="true" 
-    Service="Service.Service1" 
+    Service="Web.Service.Service1Web" 
 %>

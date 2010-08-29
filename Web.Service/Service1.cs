@@ -25,19 +25,19 @@ namespace Web.Service {
             return Conversion.ToWeb(item);
         }
 
-        Web.Contract.SampleItem Web.Contract.IService1.Get(int id) {
-            var item = service.Get(id);
+        Web.Contract.SampleItem Web.Contract.IService1.Get(string id) {
+            var item = service.Get(int.Parse(id));
             return Conversion.ToWeb(item);
         }
 
-        Web.Contract.SampleItem Web.Contract.IService1.Update(int id, Web.Contract.SampleItem instance) {
-            var item = service.Update(id, Conversion.ToApp(instance));
+        Web.Contract.SampleItem Web.Contract.IService1.Update(string id, Web.Contract.SampleItem instance) {
+            var item = service.Update(int.Parse(id), Conversion.ToApp(instance));
             return Conversion.ToWeb(item);
         }
 
-        void Web.Contract.IService1.Delete(int id) {
+        void Web.Contract.IService1.Delete(string id) {
             try {
-                service.Delete(id);
+                service.Delete(int.Parse(id));
             } catch(KeyNotFoundException ) {
                 //HTTP Delete is idempotent, hence delete with key that is no longer found
                 //is not an error

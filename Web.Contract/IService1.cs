@@ -17,12 +17,14 @@ namespace Web.Contract {
         SampleItem Create(SampleItem instance);
 
         [WebGet(UriTemplate = "{id}")]
-        SampleItem Get(int id);
+        //NOTE: parameter is string, which is a dependency of WebGetAttribute 
+        //implementation: uri elements must be string
+        SampleItem Get(string id);
 
         [WebInvoke(UriTemplate = "{id}", Method = "PUT")]
-        SampleItem Update(int id, SampleItem instance);
+        SampleItem Update(string id, SampleItem instance);
 
         [WebInvoke(UriTemplate = "{id}", Method = "DELETE")]
-        void Delete(int id);
+        void Delete(string id);
     }
 }
