@@ -1,0 +1,108 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<logicalClassDesignerModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" xmlns:dm9="http://schemas.microsoft.com/VisualStudio/TeamArchitect/SequenceDesigner" dslVersion="1.0.0.0" Id="a7c16ce0-d6ed-4188-9dba-345d29d07cd9" name="UMLClassDiagram1" linkedPackageId="16e738d9-9811-4423-b8b2-a0d7744ffca9" xmlns="http://schemas.microsoft.com/dsltools/LogicalClassDesigner">
+  <packagedElements>
+    <logicalClassDesignerModelHasPackages>
+      <package Id="8d6cf0a5-75a5-4be0-b406-397aca459828" name="Core">
+        <elementDefinition Id="b8e96aeb-b162-403f-82e2-edab93916f5a" />
+        <packagedElements>
+          <packageHasNamedElement>
+            <Interface Id="f4688983-871a-4311-bee2-0cfb546826fb" name="Core.IService1" isAbstract="false" isLeaf="false">
+              <elementDefinition Id="502c3d5e-3e13-49be-80c9-ef14e2363f29" />
+            </Interface>
+          </packageHasNamedElement>
+          <packageHasNamedElement>
+            <class Id="0e02a954-4ca7-4c73-a3cc-d469df6f1140" name="Core.Service1" isAbstract="false" isLeaf="false" isActiveClass="false">
+              <elementDefinition Id="84329d68-1ca2-4edf-91a9-1eb5b388ec2d" />
+              <suppliersInternal>
+                <interfaceRealization Id="11bad3dc-964e-4f2f-acaa-341c20f29e8f">
+                  <interfaceMoniker Id="f4688983-871a-4311-bee2-0cfb546826fb" LastKnownName="Core.IService1" />
+                  <elementDefinition Id="6d214172-c4be-46fd-ae4b-7684bd951dd5" />
+                </interfaceRealization>
+              </suppliersInternal>
+            </class>
+          </packageHasNamedElement>
+        </packagedElements>
+      </package>
+    </logicalClassDesignerModelHasPackages>
+    <logicalClassDesignerModelHasPackages>
+      <package Id="e5570ba1-2f7a-4590-812c-a29d81e31d7c" name="Middleware">
+        <elementDefinition Id="738aacb4-d3ee-42c5-844a-2cefb7859158" />
+        <packagedElements>
+          <packageHasNamedElement>
+            <Interface Id="1faf73a1-c5f9-4488-97b3-177575b3d479" name="Web.IService1" isAbstract="false" isLeaf="false">
+              <elementDefinition Id="ef822ad8-fbb1-421a-abbb-4e41fe39ed07" />
+            </Interface>
+          </packageHasNamedElement>
+          <packageHasNamedElement>
+            <class Id="625113c0-cdd0-4cb4-ad10-cc4df80676d0" name="Web.Service1" isAbstract="false" isLeaf="false" isActiveClass="false">
+              <elementDefinition Id="15257b2c-f694-4041-8d19-4a5e88ad4211" />
+              <suppliersInternal>
+                <interfaceRealization Id="7518f71a-ead7-4ed3-8fc9-6af709172249">
+                  <interfaceMoniker Id="1faf73a1-c5f9-4488-97b3-177575b3d479" LastKnownName="Web.IService1" />
+                  <elementDefinition Id="1c2d6087-cd54-490f-bfdb-1293e6c5ddca" />
+                </interfaceRealization>
+              </suppliersInternal>
+              <targetEnds>
+                <association Id="88ce775b-f9ea-487b-9390-fc9219bee800" isDerived="false" sourceEndRoleName="impl" targetEndRoleName="Core.Service1" isLeaf="false" isAbstract="false">
+                  <classMoniker Id="0e02a954-4ca7-4c73-a3cc-d469df6f1140" LastKnownName="Core.Service1" />
+                  <relationshipOwnedElementsInternal>
+                    <associationHasOwnedEnds>
+                      <memberEnd Id="42c9fd79-e057-4574-b1b0-a4a77be204ff" name="impl" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="Composite" isComposite="false" isNavigableOwned="false">
+                        <elementDefinition Id="f5aba40e-dd34-444a-853a-ee0e6735afc1" />
+                      </memberEnd>
+                    </associationHasOwnedEnds>
+                    <associationHasOwnedEnds>
+                      <memberEnd Id="7d32f8a5-a361-4980-8866-0f767836fbb2" name="Core.Service1" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="true">
+                        <elementDefinition Id="c372c897-71b5-44b3-b989-51d627c609ef" />
+                      </memberEnd>
+                    </associationHasOwnedEnds>
+                  </relationshipOwnedElementsInternal>
+                  <elementDefinition Id="3af18759-7750-4a0c-a829-0f324420f997" />
+                </association>
+              </targetEnds>
+            </class>
+          </packageHasNamedElement>
+        </packagedElements>
+      </package>
+    </logicalClassDesignerModelHasPackages>
+    <logicalClassDesignerModelHasPackages>
+      <package Id="5e260bcb-11d1-45bf-b502-1813c8a29111" name="Host">
+        <elementDefinition Id="840145c2-a609-496b-8a57-4b5b267edc9b" />
+        <suppliersInternal>
+          <dependency Id="bfa905b3-d8c7-4219-b111-a319d8cdf698">
+            <packageMoniker Id="e5570ba1-2f7a-4590-812c-a29d81e31d7c" LastKnownName="Middleware" />
+            <elementDefinition Id="d97ced74-6f63-479d-b283-4491a5d5c154" />
+          </dependency>
+        </suppliersInternal>
+      </package>
+    </logicalClassDesignerModelHasPackages>
+    <logicalClassDesignerModelHasPackages>
+      <package Id="981b10b2-57ab-4bac-85cc-d78ae2b18096" name="Client">
+        <elementDefinition Id="bdcfb0e8-2708-48c2-b8c5-ee3dcf4762bb" />
+        <suppliersInternal>
+          <dependency Id="d354fa51-624a-484a-9bad-ef81592f81eb">
+            <interfaceMoniker Id="1faf73a1-c5f9-4488-97b3-177575b3d479" LastKnownName="Web.IService1" />
+            <elementDefinition Id="c4267b8a-203d-43c0-a147-c8dfa66f4a61" />
+          </dependency>
+        </suppliersInternal>
+      </package>
+    </logicalClassDesignerModelHasPackages>
+  </packagedElements>
+  <package Id="16e738d9-9811-4423-b8b2-a0d7744ffca9" name="Modeling">
+    <elementDefinition Id="97a48913-24ad-45a2-b5b2-33aed0f86ce7" />
+    <profileInstances>
+      <packageHasProfileInstances Id="312897dd-d0d1-4684-b1d1-1e9d2637c14c">
+        <profileInstance Id="61097c24-8ba7-4cbd-96f7-f45d839d9a16" name="StandardProfileL2">
+          <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+        </profileInstance>
+        <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+      </packageHasProfileInstances>
+      <packageHasProfileInstances Id="59a54648-12af-40ff-aed4-19cb3992c69a">
+        <profileInstance Id="ffd8473c-74ed-49ee-825b-2d94c9726199" name="StandardProfileL3">
+          <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+        </profileInstance>
+        <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+      </packageHasProfileInstances>
+    </profileInstances>
+  </package>
+</logicalClassDesignerModel>

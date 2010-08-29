@@ -1,0 +1,74 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/VisualStudio/TeamArchitect/SequenceDesigner" xmlns:dm9="http://schemas.microsoft.com/dsltools/LogicalClassDesigner"
+  dslVersion="1.0.0.0"
+  Id="738aacb4-d3ee-42c5-844a-2cefb7859158"
+  name="Middleware" xmlns="http://schemas.microsoft.com/dsltools/ModelStore">
+  <packagedElements>
+    <packageHasNamedElement>
+      <Interface
+        Id="ef822ad8-fbb1-421a-abbb-4e41fe39ed07"
+        name="Web.IService1"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="15257b2c-f694-4041-8d19-4a5e88ad4211"
+        name="Web.Service1"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <suppliersInternal>
+          <interfaceRealization
+            Id="1c2d6087-cd54-490f-bfdb-1293e6c5ddca">
+            <interfaceMoniker
+              Id="ef822ad8-fbb1-421a-abbb-4e41fe39ed07"
+              LastKnownName="Web.IService1"
+              LastKnownLocation="Package1_2346.uml" />
+          </interfaceRealization>
+        </suppliersInternal>
+        <targetEnds>
+          <association
+            Id="3af18759-7750-4a0c-a829-0f324420f997"
+            isDerived="false"
+            sourceEndRoleName="impl"
+            targetEndRoleName="Core.Service1"
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="84329d68-1ca2-4edf-91a9-1eb5b388ec2d"
+              LastKnownName="Core.Service1"
+              LastKnownLocation="Package_2346.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="f5aba40e-dd34-444a-853a-ee0e6735afc1"
+                  name="impl"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="Composite"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="c372c897-71b5-44b3-b989-51d627c609ef"
+                  name="Core.Service1"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="true" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
+      </class>
+    </packageHasNamedElement>
+  </packagedElements>
+</package>
