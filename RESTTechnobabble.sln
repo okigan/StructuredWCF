@@ -32,6 +32,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Web.Service", "Web.Service\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Web.Contract", "Web.Contract\Web.Contract.csproj", "{D48E9995-7ACC-40BF-B13A-B62EF1BA278B}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "0DataLayer", "0DataLayer", "{9B2E07DF-3B24-495C-A7E2-C8FE3D62DA14}"
+EndProject
 Global
 	GlobalSection(TestCaseManagementSettings) = postSolution
 		CategoryFile = RESTTechnobabble.vsmdi
