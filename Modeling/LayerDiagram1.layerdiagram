@@ -1,0 +1,97 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<layerModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/SimpleShapesModel" dslVersion="1.0.0.0" Id="71692526-e307-4382-92dc-701a118c1a24" xmlns="http://schemas.microsoft.com/VisualStudio/TeamArchitect/LayerDesigner">
+  <layers>
+    <layer Id="902a1a6d-a58b-463e-bcb3-967fe27056b3" name="Core">
+      <references>
+        <reference Id="139133bb-ca89-4990-a51e-77f567332b44" name="Core.Contract">
+          <ArtifactNode Label="Core.Contract" Category="CodeSchema_Project" Id="(Assembly=&quot;$(PersonalUri)/Visual Studio 2010/Projects/RESTTechnobabble/Core.Contract/Core.Contract.csproj&quot;)">
+            <Category Ref="CodeSchema_SourceFile" />
+          </ArtifactNode>
+          <ExpandedNode Id="(Assembly=Contract)" Label="Contract.dll" Category="FileSystem.Category.FileOfType.dll">
+            <LinkCategory Ref="Produces" />
+            <LinkCategory Ref="Represents" />
+          </ExpandedNode>
+        </reference>
+        <reference Id="263eae6b-2db3-44b8-8431-a24669292cbf" name="Core.Service">
+          <ArtifactNode Label="Core.Service" Category="CodeSchema_Project" Id="(Assembly=&quot;$(PersonalUri)/Visual Studio 2010/Projects/RESTTechnobabble/Core.Service/Core.Service.csproj&quot;)">
+            <Category Ref="CodeSchema_SourceFile" />
+          </ArtifactNode>
+          <ExpandedNode Id="(Assembly=Service)" Label="Service.dll" Category="FileSystem.Category.FileOfType.dll">
+            <LinkCategory Ref="Produces" />
+            <LinkCategory Ref="Represents" />
+          </ExpandedNode>
+        </reference>
+      </references>
+    </layer>
+    <layer Id="5cbcb2c6-3390-40b8-9c1f-e8aaeb32d887" name="Host">
+      <dependencyToLayers>
+        <dependencyFromLayerToLayer Id="70210e86-8b35-43c4-a203-010132870cd4" direction="Forward">
+          <layerMoniker Id="50f9a5c4-78ef-44df-97bf-f256156ff398" />
+        </dependencyFromLayerToLayer>
+      </dependencyToLayers>
+      <references>
+        <reference Id="9a178946-14ee-4a7c-b18a-30b205f2ef6f" name="Host.ConsoleApp">
+          <ArtifactNode Label="Host.ConsoleApp" Category="CodeSchema_Project" Id="(Assembly=&quot;$(PersonalUri)/Visual Studio 2010/Projects/RESTTechnobabble/Host.ConsoleApp/Host.ConsoleApp.csproj&quot;)">
+            <Category Ref="CodeSchema_SourceFile" />
+          </ArtifactNode>
+          <ExpandedNode Id="(Assembly=Host.ConsoleApp)" Label="Host.ConsoleApp.exe" Category="FileSystem.Category.FileOfType.exe">
+            <LinkCategory Ref="Produces" />
+            <LinkCategory Ref="Represents" />
+          </ExpandedNode>
+        </reference>
+      </references>
+    </layer>
+    <layer Id="fb502998-d392-4eae-b9f9-fcba74c9875f" name="Client">
+      <dependencyToLayers>
+        <dependencyFromLayerToLayer Id="021ab981-2952-47e3-8cfa-87e3061ef652" direction="Forward">
+          <layerMoniker Id="896d2664-5526-4154-82c6-97b7c2d1e809" />
+        </dependencyFromLayerToLayer>
+      </dependencyToLayers>
+      <references>
+        <reference Id="2ccd696a-2b85-4488-a9c7-0769a79be9ec" name="Client.WebApp">
+          <ArtifactNode Label="Client.WebApp" Category="CodeSchema_Project" Id="(Assembly=&quot;$(PersonalUri)/Visual Studio 2010/Projects/RESTTechnobabble/Client.WebApp/Client.WebApp.csproj&quot;)">
+            <Category Ref="CodeSchema_SourceFile" />
+          </ArtifactNode>
+          <ExpandedNode Id="(Assembly=Client.WebApp)" Label="Client.WebApp.dll" Category="FileSystem.Category.FileOfType.dll">
+            <LinkCategory Ref="Produces" />
+            <LinkCategory Ref="Represents" />
+          </ExpandedNode>
+        </reference>
+      </references>
+    </layer>
+    <layer Id="896d2664-5526-4154-82c6-97b7c2d1e809" name="Middleware Contract">
+      <references>
+        <reference Id="5d00ae31-2c87-493c-bf98-ec0995670366" name="Web.Contract">
+          <ArtifactNode Label="Web.Contract" Category="CodeSchema_Project" Id="(Assembly=&quot;$(PersonalUri)/Visual Studio 2010/Projects/RESTTechnobabble/Web.Contract/Web.Contract.csproj&quot;)">
+            <Category Ref="CodeSchema_SourceFile" />
+          </ArtifactNode>
+          <ExpandedNode Id="(Assembly=Contract.Web)" Label="Contract.Web.dll" Category="FileSystem.Category.FileOfType.dll">
+            <LinkCategory Ref="Produces" />
+            <LinkCategory Ref="Represents" />
+          </ExpandedNode>
+        </reference>
+      </references>
+    </layer>
+    <layer Id="50f9a5c4-78ef-44df-97bf-f256156ff398" name="Middleware Service">
+      <dependencyToLayers>
+        <dependencyFromLayerToLayer Id="d1caa108-5061-4129-a45b-760a6b3fcef9" direction="Forward">
+          <layerMoniker Id="902a1a6d-a58b-463e-bcb3-967fe27056b3" />
+        </dependencyFromLayerToLayer>
+        <dependencyFromLayerToLayer Id="c1e23388-e7bb-49c1-8242-d1a1816640e2" direction="Forward">
+          <layerMoniker Id="896d2664-5526-4154-82c6-97b7c2d1e809" />
+        </dependencyFromLayerToLayer>
+      </dependencyToLayers>
+      <references>
+        <reference Id="f686fce0-91a1-4e91-854d-f2f4a5d5940c" name="Web.Service">
+          <ArtifactNode Label="Web.Service" Category="CodeSchema_Project" Id="(Assembly=&quot;$(PersonalUri)/Visual Studio 2010/Projects/RESTTechnobabble/Web.Service/Web.Service.csproj&quot;)">
+            <Category Ref="CodeSchema_SourceFile" />
+          </ArtifactNode>
+          <ExpandedNode Id="(Assembly=Service.Web)" Label="Service.Web.dll" Category="FileSystem.Category.FileOfType.dll">
+            <LinkCategory Ref="Produces" />
+            <LinkCategory Ref="Represents" />
+          </ExpandedNode>
+        </reference>
+      </references>
+    </layer>
+  </layers>
+</layerModel>
