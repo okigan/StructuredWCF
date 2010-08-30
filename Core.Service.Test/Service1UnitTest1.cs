@@ -63,7 +63,7 @@ namespace Core.Service.Test {
             IService1 service = new Service1();
             var list = service.GetCollection();
 
-            foreach(var x in list) {
+            foreach (var x in list) {
                 SampleItem item = service.Get(x.Id);
                 Assert.AreEqual(item.Id, x.Id);
             }
@@ -72,14 +72,23 @@ namespace Core.Service.Test {
         [TestMethod]
         public void TestUpdate() {
             IService1 service = new Service1();
-            var list = service.GetCollection();
+            var initialList = service.GetCollection();
 
-            foreach(var x in list) {
-                SampleItem item = service.Get(x.Id);
+            foreach (var originalItem in initialList) {
+                SampleItem item = service.Get(originalItem.Id);
                 item.StringValue = "Updated from" + item.StringValue;
 
                 SampleItem newItem = service.Update(item.Id, item);
                 Assert.AreEqual(item, newItem);
+
+                var updatedList = service.GetCollection();
+                SampleItem updateItemFromCollection = (from temp in updatedList
+                                                       where
+                                                           temp.Id == item.Id
+                                                       select temp).First();
+
+                Assert.AreEqual(updateItemFromCollection.Id, newItem.Id);
+                Assert.AreEqual(updateItemFromCollection.StringValue, newItem.StringValue);
             }
         }
 
@@ -88,14 +97,17 @@ namespace Core.Service.Test {
             IService1 service = new Service1();
             var list = service.GetCollection();
 
-            foreach(var x in list) {
+            foreach (var x in list) {
                 SampleItem item = service.Get(x.Id);
                 service.Delete(item.Id);
+
+                var updatedList = service.GetCollection();
+                Assert.IsFalse(updatedList.Contains(item));
 
                 try {
                     //now get shall fail
                     service.Get(item.Id);
-                } catch(Exception) {
+                } catch (Exception) {
                     continue;
                 }
                 //should not reach this code

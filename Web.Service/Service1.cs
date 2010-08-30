@@ -1,16 +1,22 @@
 ﻿using System.Collections.Generic;
 using System.ServiceModel.Activation;
+using System.ServiceModel;
 
 namespace Web.Service {
     [AspNetCompatibilityRequirements(RequirementsMode = AspNetCompatibilityRequirementsMode.Allowed)]
 
     // Uncomment the next line to create a new instance of the service for each call
     //[ServiceBehavior(InstanceContextMode = InstanceContextMode.PerCall)]
+    [ServiceBehavior(InstanceContextMode = InstanceContextMode.Single)]
     // If the service is renamed, remember to update the global.asax.cs file
     // and/or the web.config and/or the corresponding *.svc file
     public class Service1 : Web.Contract.IService1
     {
-        Core.Contract.IService1 impl = new Core.Service.Service1();
+        Core.Contract.IService1 impl = null;
+
+        public Service1() {
+            impl = new Core.Service.Service1();
+        }
 
         #region IService1 methods
         IList<Web.Contract.SampleItem> Web.Contract.IService1.GetCollection() {
