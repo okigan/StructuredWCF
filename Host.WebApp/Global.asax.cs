@@ -10,8 +10,13 @@ namespace Host.WebApp {
         }
 
         private void RegisterRoutes() {
-            // Edit the base address of Service1 by replacing the "Service1" string below
-            RouteTable.Routes.Add(new ServiceRoute("Service1", new WebServiceHostFactory(), typeof(Web.Service.Service1)));
+            RouteTable.Routes.Add(
+                new ServiceRoute(
+                    "Technobabble"
+                  , new WebServiceHostFactory()
+                  , typeof(Web.Service.TechnobabbleService)
+                )
+            );
         }
     }
 }

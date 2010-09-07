@@ -11,7 +11,7 @@ namespace Host.ConsoleApp {
 
             try {
                 serviceHost = new ServiceHost(
-                    typeof(Web.Service.Service1)
+                    typeof(Web.Service.TechnobabbleService)
                  );
 
                 serviceHost.Open();

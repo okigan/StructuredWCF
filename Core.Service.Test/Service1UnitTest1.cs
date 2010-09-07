@@ -10,8 +10,8 @@ namespace Core.Service.Test {
     /// Summary description for UnitTest1
     /// </summary>
     [TestClass]
-    public class Service1UnitTest1 {
-        public Service1UnitTest1() {
+    public class TechnobabbleUnitTest1 {
+        public TechnobabbleUnitTest1() {
         }
 
         private TestContext testContextInstance;
@@ -53,14 +53,14 @@ namespace Core.Service.Test {
 
         [TestMethod]
         public void TestGetCollection() {
-            IService1 service = new Service1();
+            ITechnobabble service = new TechnobabbleService();
             var list = service.GetCollection();
             Assert.IsTrue(list.Count > 0);
         }
 
         [TestMethod]
         public void TestGet() {
-            IService1 service = new Service1();
+            ITechnobabble service = new TechnobabbleService();
             var list = service.GetCollection();
 
             foreach (var x in list) {
@@ -71,7 +71,7 @@ namespace Core.Service.Test {
 
         [TestMethod]
         public void TestUpdate() {
-            IService1 service = new Service1();
+            ITechnobabble service = new TechnobabbleService();
             var initialList = service.GetCollection();
 
             foreach (var originalItem in initialList) {
@@ -94,7 +94,7 @@ namespace Core.Service.Test {
 
         [TestMethod]
         public void TestDelete() {
-            IService1 service = new Service1();
+            ITechnobabble service = new TechnobabbleService();
             var list = service.GetCollection();
 
             foreach (var x in list) {

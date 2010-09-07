@@ -2,62 +2,249 @@
 <html>
 <head>
     <title></title>
+    <!--    <style type="text/css">
+        img.snapshot
+        {
+            max-width: 400px;
+        }
+        td
+        {
+            vertical-align: top;
+        }
+        span.term
+        {
+            font-style: italic;
+        }
+    </style>-->
 </head>
 <body>
     <h2>
         Introduction</h2>
     <p>
-        What the article/code snippet does, why it's useful, the problem it solves etc.</p>
+        For most develops Visual Studio is the best tool for the job. And due to variety
+        of factors it is also often the only one. It comes with plethora of project templates
+        to get a developer started or to aid to a seasoned professional. Regrettably, the
+        templates are often oversimplified samples that end up in the real products for
+        the mere fact that they were the default, not because they suited for the problem
+        at hand.
+    </p>
     <p>
-        Visual Studio 2010 is an excellent tool, but default project template and wizards
-        continue to encourage bad design practices. This article shows a better structure
-        for your projects that will reduce the coupling between the different layers.</p>
-    <p>
-        To give the article a bit more realism, the text comes along with set of projects
-        to illustrate the point. The projects demonstrate how to build a REST based service
-        atop of Windows Communication Foundation (WCF), how to host the service in two types
-        of hosting and a sample web client application.</p>
-    <p>
-        Additionally to facilitate adoption of such layering a Visual Studio template is
-        published at [TODO: fill-in the published location].</p>
+        This article details how to implement a web service but with a better project structure,
+        reduced coupling between components and separation between interface definition
+        and their implementation. And last but not least, a new template is provided to
+        fossilize these newly found principals.
+    </p>
     <h2>
         Background</h2>
     <p>
-        ( Optional) Is there any background to this article that may be useful such as an
-        introduction to the basic ideas presented?
-        <br />
-        The notion of separating software projects into layers has been around for a long
-        time, but still there seems to be a lot confusion on terminology and techniques.
-        Do checkout <a href="http://www.amazon.com/s/ref=nb_sb_noss?url=search-alias%3Dstripbooks&field-keywords=software%2Barchitecture">
-            available books</a> and also as short introduction into "layers vs tiers" I
-        recommend to read <a href="http://msdn.microsoft.com/en-us/library/aa905336.aspx">"Pragmatic
-            Architecture: Layering" by Ted Neward.</a>
+        For illustration purposes the article is structured around a fantom web service
+        built atop of WCF. The service exposes a collection of resources through REST, which
+        in turn can be hosted in IIS or stand alone. Also sample web client application
+        is included, as well as unit test for the core logic.</p>
+    <p>
+        The project template will be hosted at <a href="http://visualstudiogallery.msdn.microsoft.com/en-us/">
+            Visual Studio Gallery</a>. Check back for the updated reference.</p>
+    <p>
+        The notion of separating software projects into layers has been around for a while,
+        but still there seems to be a lot confusion on terminology and techniques. Particularly,
+        such such discussion(s) often intermix tier separation and software layers, hence
+        and introductory article <a href="http://msdn.microsoft.com/en-us/library/aa905336.aspx">
+            "Pragmatic Architecture: Layering" by Ted Neward</a> is recommended.
     </p>
     <h2>
-        Using the code</h2>
+        Web service -- the 'REST Technobabble'</h2>
     <p>
-        A brief description of how to use the article or code. The class names, the methods
-        and properties, any tricks or tips.</p>
-    <p>
-        Blocks of code should be set as style "Formatted" like this:</p>
-    <pre>
-    //
-    // Any source code blocks look like this
-    //
-    </pre>
-    <p>
-        Remember to set the Language of your code snippet using the Language dropdown.</p>
-    <p>
-        Use the "var" button to to wrap Variable or class names in &amp;lt;code&amp;gt;
-        tags like <code>this</code>.</p>
+        Software development is filled with new technology and new terminology often for
+        the same or even older technology, but in any case there is plenty of technobabble
+        involved. And in case of this article the web service actually manages a collection
+        of REST technobabble phrases. A client of this web service can request a list of
+        [latest] technobabble phrases, add new ones, modify existing and etc (i.e. CRUD
+        support).
+    </p>
     <h2>
-        Points of Interest</h2>
-    <p>
-        Did you learn anything interesting/fun/annoying while writing the code? Did you
-        do anything particularly clever or wild or zany?</p>
+        Projects</h2>
+    <table>
+        <tr>
+            <td>
+                <img src="RESTTechnobabble/projects.PNG" alt="Projects" />
+            </td>
+            <td style="vertical-align: top">
+                <p>
+                    For starters, lets review the projects involved and the way they are organized in
+                    the Visual Studio solution. Next to this paragraph is a snapshot of <span class="term">
+                        Solution Explorer</span>, which shows several solution folders and corresponding
+                    projects. The solution folders correspond to layers, which are described later.
+                </p>
+                <p>
+                    Key points about solution folders and projects:
+                    <ul>
+                        <li>Solution folders are prefixed with two digit number (ex. 10, 20) for ordering purposes.</li>
+                        <li>Project compilation is (still) controlled by project dependencies settings.</li>
+                        <li>Project/layer dependencies is visually conveyed to the developer, ie.: </li>
+                        <li>Projects at the top depend on lower [layer] projects</li>
+                    </ul>
+                </p>
+            </td>
+        </tr>
+    </table>
     <h2>
-        History</h2>
+        Layers</h2>
+    <table>
+        <tr>
+            <td>
+                <img src="RESTTechnobabble/layers.PNG" alt="Layers" style="width: 423px" />
+            </td>
+            <td style="vertical-align: top">
+                <p>
+                    The diagram next to this paragraph shows the web service, it's contract, hosting
+                    and client(s) are allocated to different layers. Arrows on the diagram show <strong>
+                        compile time</strong> dependencies between the different layers.
+                </p>
+                <p>
+                    Layer descriptions:</p>
+                <ul>
+                    <li>Data Layer -- abstraction of the persistent storage*.</li>
+                    <li>Core -- the core logic of the implementation</li>
+                    <li>Web Services -- wrapper around the <span class="term">Core</span></li>
+                    <li>Host -- hosting of the web service (i.e. IIS hosting or stand alone)</li>
+                    <li>Client -- the client application(s)</li>
+                </ul>
+                *Note: To limit scope the web service stores information in memory and the corresponding
+                logic was not factored out into separate data layer.
+                <p>
+                    Key points on the diagram for the layers and their dependencies:
+                </p>
+                <ul>
+                    <li>Compile time dependencies are shown as arrows.</li>
+                    <li>Higher layers depend on lower layers (and not vice versa).</li>
+                    <li>Client layer depends only on the contracts and not on the implementation layers.</li>
+                </ul>
+            </td>
+        </tr>
+    </table>
+    <h2>
+        Assemblies</h2>
+    <table>
+        <tr>
+            <td>
+                <img src="RESTTechnobabble/assemblies.PNG" alt="Assemblies" 
+                    style="width: 419px" />
+            </td>
+            <td style="vertical-align: top">
+                <p>
+                    The next diagram shows dependencies for the assemblies produced by the above projects.
+                    The diagram is produced by Visual Studio and provides another confirmation the layer
+                    dependencies have been observed. An interesting feature is that Visual Studio can
+                    also check these dependencies against the one specified in layer diagram (above)
+                    and inform when incorrect dependency has been added.
+                </p>
+                <p>
+                    The key points on the diagram are:</p>
+                <ul>
+                    <li>Client side assemblies depend only on the definition of the contracts</li>
+                    <li>Number of assemblies deployed on the client is smaller (hence smaller deployment
+                        size)</li>
+                    <li>Corrections in service implementation can be implemented without redeployment of
+                        the client assemblies.</li>
+                </ul>
+            </td>
+        </tr>
+    </table>
+    <h2>
+        Running the sample</h2>
     <p>
-        Keep a running update of any changes or improvements you've made here.</p>
+        Now that you've read a lot of technobabble from previous section, it may be interesting
+        to see what the running web service looks like.
+    </p>
+    <p>
+        For the demo purpose I implemented the client to the web service as (another) web
+        application that consumes and allows to manipulate the technobabble phrases (after
+        all, technobabble is always evolving).</p>
+    <p>
+        All projects have corresponding dependencies setup and hence <strong>Build&Run of Client.WebApp</strong>
+        project shall be sufficient. Otherwise you can Build&Run the Host.WebApp project
+        followed by (Build&Run) of the Client.WebApp project.</p>
+    <table>
+        <tr>
+            <td>
+                <img src="RESTTechnobabble/webclient.PNG" 
+                    alt="REST Technobabble web client snapshot" style="height: 379px" />
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <img src="RESTTechnobabble/restapi.PNG" alt="REST api snapshot" 
+                    style="height: 383px" />
+            </td>
+        </tr>
+    </table>
+    <h2>
+        Benefits</h2>
+    <p>
+        Most obvious difference when compared to Visual Studio default WCF/REST template
+        and the one shown here is the number of projects involved. But is it actually better?</p>
+    <p>
+        Well, the answer is the venerable : "It depends", but here are some beneficial aspects
+        of this approach:
+    </p>
+    <ul>
+        <li>Separation of concerns -- each project is focused on smaller more specific task</li>
+        <li>Client side assemblies depend only on the definition of the contracts and hence
+            no implementation assemblies need to be deployed to the client size. </li>
+        <li>Number of assemblies deployed on a client is reduced (hence smaller deployment size)</li>
+        <li>Corrections in service implementation can be implemented without redeployment of
+            the client assemblies.</li>
+        <li>Much easier implementation of unit test(s) for the functionality in the <span
+            class="term">Core layer</span>.</li>
+        <li>Easier to address different API semantics (ex. stateless aspect of REST vs. stateful
+            usage on internal API exposed by <span class="term">Core layer</span>)</li>
+        <li>Web and Host projects can focus on their targets which are very technology specifics
+            and rapidly change over time. </li>
+    </ul>
+    All of the above seem more then fair benefit to have more granular projects.
+    <h2>
+        Unit test</h2>
+    <p>
+        As mentioned above the <span class="term">Core layer</span> can follow much simpler
+        development practices. Because, it has limited dependency on the deployment infrastructure
+        the unit test for it can be implemented much easier. Especially, when compared to
+        the system/integration level testing required when Client and Web services are involved.</p>
+    <img src="RESTTechnobabble/unittest.PNG" alt="Unit test results" />
+    <p>
+        Additionally the Web and Host projects can focus on their targets which are very
+        technology specifics and rapidly change over time. Today the services are implemented
+        with WCF and hosted in IIS through a ASP.NET project or a standalone executable,
+        tomorrow it could be a Windows(r) service or yet something else.</p>
+    <h2>
+        Points of interest</h2>
+    <p>
+        Even in this simple example this separation allows to address the difference in
+        semantics much easier. For example the service is exposed through REST and implemented
+        though .NET WebGet attribute. This adds the restriction that only string parameters
+        will be parsed from the URI (behavior of WebGet implementation) and that consecutive
+        identical calls to delete a resource is not an error condition (which it is in general
+        procedural programming).
+    </p>
+    <h2>
+        Visual Studio integration</h2>
+    <p>
+        Below is shown a snapshot of Visual Studio integration with the wizard which creates
+        the projects according to above layout and structure.</p>
+    <img width="600px" src="RESTTechnobabble/vsintegration.PNG" alt="Visual studio integration" />
+    <h2>
+        References</h2>
+    <p>
+        Volumes of information regarding application/presentation split and the corresponding
+        presentation/business logic/data access tiers are available -- in fact to may to
+        list here. Nevertheless, practical advise is rare. Following references where used
+        for this article:
+        <ul>
+            <li><a href="http://msdn.microsoft.com/en-us/library/aa905336.aspx">"Pragmatic Architecture:
+                Layering" by Ted Neward</a></li>
+            <li><a href="http://perseus.franklins.net/dnrtvplayer/player.aspx?ShowNum=0122">Video
+                cast with Miguel Castro.</a> -- Reinforced my views on project organization and
+                gives that hope separation of concerns will be evangelized along side with .NET
+                technologies.</li>
+        </ul>
 </body>
 </html>

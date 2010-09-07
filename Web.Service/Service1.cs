@@ -10,36 +10,36 @@ namespace Web.Service {
     [ServiceBehavior(InstanceContextMode = InstanceContextMode.Single)]
     // If the service is renamed, remember to update the global.asax.cs file
     // and/or the web.config and/or the corresponding *.svc file
-    public class Service1 : Web.Contract.IService1
+    public class TechnobabbleService : Web.Contract.ITechnobabble
     {
-        Core.Contract.IService1 impl = null;
+        Core.Contract.ITechnobabble impl = null;
 
-        public Service1() {
-            impl = new Core.Service.Service1();
+        public TechnobabbleService() {
+            impl = new Core.Service.TechnobabbleService();
         }
 
-        #region IService1 methods
-        IList<Web.Contract.SampleItem> Web.Contract.IService1.GetCollection() {
+        #region ITechnobabble methods
+        IList<Web.Contract.SampleItem> Web.Contract.ITechnobabble.GetCollection() {
             IList<Core.Contract.SampleItem> list = impl.GetCollection();
             return Conversion.ToWeb(list);
         }
 
-        Web.Contract.SampleItem Web.Contract.IService1.Create(Web.Contract.SampleItem instance) {
+        Web.Contract.SampleItem Web.Contract.ITechnobabble.Create(Web.Contract.SampleItem instance) {
             var item = impl.Create(Conversion.ToApp(instance));
             return Conversion.ToWeb(item);
         }
 
-        Web.Contract.SampleItem Web.Contract.IService1.Get(string id) {
+        Web.Contract.SampleItem Web.Contract.ITechnobabble.Get(string id) {
             var item = impl.Get(int.Parse(id));
             return Conversion.ToWeb(item);
         }
 
-        Web.Contract.SampleItem Web.Contract.IService1.Update(string id, Web.Contract.SampleItem instance) {
+        Web.Contract.SampleItem Web.Contract.ITechnobabble.Update(string id, Web.Contract.SampleItem instance) {
             var item = impl.Update(int.Parse(id), Conversion.ToApp(instance));
             return Conversion.ToWeb(item);
         }
 
-        void Web.Contract.IService1.Delete(string id) {
+        void Web.Contract.ITechnobabble.Delete(string id) {
             try {
                 impl.Delete(int.Parse(id));
             } catch(KeyNotFoundException ) {
