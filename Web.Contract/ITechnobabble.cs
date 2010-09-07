@@ -7,7 +7,7 @@ using System.ServiceModel;
 
 namespace Web.Contract {
     [ServiceContract]
-    public interface IService1 {
+    public interface ITechnobabble {
         // TODO: Implement the collection resource that will contain the SampleItem instances
 
         [WebGet(UriTemplate = "")]

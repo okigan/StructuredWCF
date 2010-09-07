@@ -5,7 +5,7 @@ using System.Text;
 using Core.Contract;
 
 namespace Core.Service {
-    public class Service1 : IService1 {
+    public class TechnobabbleService : ITechnobabble {
         static string[] babble = new string[] {
             "REST ipsum dolor sit amet, consectetur adipiscing elit."
             ,"Integer at ligula sed sapien gravida REST."
@@ -45,14 +45,14 @@ namespace Core.Service {
 
         Dictionary<int, string> data = new Dictionary<int,string>();
 
-        public Service1() {
+        public TechnobabbleService() {
             for(int id = 0; id < babble.Length; id++) {
                 data.Add(id, babble[id]);
             }
         }
 
-        #region IService1 methods
-        IList<SampleItem> IService1.GetCollection() {
+        #region ITechnobabble methods
+        IList<SampleItem> ITechnobabble.GetCollection() {
             IList<SampleItem> list = new List<SampleItem>();
             foreach(var b in data){
                 list.Add(new SampleItem() { Id = b.Key, StringValue = b.Value });
@@ -60,18 +60,18 @@ namespace Core.Service {
             return list;
         }
 
-        SampleItem IService1.Create(SampleItem instance) {
+        SampleItem ITechnobabble.Create(SampleItem instance) {
             data.Add(instance.Id, instance.StringValue);
 
             return instance;
         }
 
-        SampleItem IService1.Get(int id) {
+        SampleItem ITechnobabble.Get(int id) {
             SampleItem item = new SampleItem() { Id = id, StringValue = data[id] };
             return item;
         }
 
-        SampleItem IService1.Update(int id, SampleItem instance) {
+        SampleItem ITechnobabble.Update(int id, SampleItem instance) {
             if(!data.ContainsKey(id)){
                 throw new KeyNotFoundException();
             }
@@ -82,7 +82,7 @@ namespace Core.Service {
             return instance;
         }
 
-        void IService1.Delete(int id) {
+        void ITechnobabble.Delete(int id) {
             if(!data.ContainsKey(id)) {
                 throw new KeyNotFoundException();
             }

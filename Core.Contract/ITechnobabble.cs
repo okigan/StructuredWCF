@@ -5,7 +5,7 @@ using System.Text;
 
 
 namespace Core.Contract {
-    public interface IService1 {
+    public interface ITechnobabble {
         IList<SampleItem> GetCollection();
         SampleItem Create(SampleItem instance);
         SampleItem Get(int id);

@@ -1,31 +1,9 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <layerModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/SimpleShapesModel" dslVersion="1.0.0.0" Id="71692526-e307-4382-92dc-701a118c1a24" xmlns="http://schemas.microsoft.com/VisualStudio/TeamArchitect/LayerDesigner">
   <layers>
-    <layer Id="902a1a6d-a58b-463e-bcb3-967fe27056b3" name="Core">
-      <references>
-        <reference Id="139133bb-ca89-4990-a51e-77f567332b44" name="Core.Contract">
-          <ArtifactNode Label="Core.Contract" Category="CodeSchema_Project" Id="(Assembly=&quot;$(PersonalUri)/Visual Studio 2010/Projects/RESTTechnobabble/Core.Contract/Core.Contract.csproj&quot;)">
-            <Category Ref="CodeSchema_SourceFile" />
-          </ArtifactNode>
-          <ExpandedNode Id="(Assembly=Contract)" Label="Contract.dll" Category="FileSystem.Category.FileOfType.dll">
-            <LinkCategory Ref="Produces" />
-            <LinkCategory Ref="Represents" />
-          </ExpandedNode>
-        </reference>
-        <reference Id="263eae6b-2db3-44b8-8431-a24669292cbf" name="Core.Service">
-          <ArtifactNode Label="Core.Service" Category="CodeSchema_Project" Id="(Assembly=&quot;$(PersonalUri)/Visual Studio 2010/Projects/RESTTechnobabble/Core.Service/Core.Service.csproj&quot;)">
-            <Category Ref="CodeSchema_SourceFile" />
-          </ArtifactNode>
-          <ExpandedNode Id="(Assembly=Service)" Label="Service.dll" Category="FileSystem.Category.FileOfType.dll">
-            <LinkCategory Ref="Produces" />
-            <LinkCategory Ref="Represents" />
-          </ExpandedNode>
-        </reference>
-      </references>
-    </layer>
     <layer Id="5cbcb2c6-3390-40b8-9c1f-e8aaeb32d887" name="Host">
       <dependencyToLayers>
-        <dependencyFromLayerToLayer Id="70210e86-8b35-43c4-a203-010132870cd4" direction="Forward">
+        <dependencyFromLayerToLayer Id="0b26326c-c38c-417e-a94e-6ed6a8d6d509" direction="Forward">
           <layerMoniker Id="50f9a5c4-78ef-44df-97bf-f256156ff398" />
         </dependencyFromLayerToLayer>
       </dependencyToLayers>
@@ -39,12 +17,21 @@
             <LinkCategory Ref="Represents" />
           </ExpandedNode>
         </reference>
+        <reference Id="3edfa9f9-0a84-48e3-895c-f8f2e99653f3" name="Host.WebApp">
+          <ArtifactNode Label="Host.WebApp" Category="CodeSchema_Project" Id="(Assembly=&quot;$(PersonalUri)/visual studio 2010/Projects/RESTTechnobabble/Host.WebApp/Host.WebApp.csproj&quot;)">
+            <Category Ref="CodeSchema_SourceFile" />
+          </ArtifactNode>
+          <ExpandedNode Id="(Assembly=Host.WebApp)" Label="Host.WebApp.dll" Category="FileSystem.Category.FileOfType.dll">
+            <LinkCategory Ref="Produces" />
+            <LinkCategory Ref="Represents" />
+          </ExpandedNode>
+        </reference>
       </references>
     </layer>
     <layer Id="fb502998-d392-4eae-b9f9-fcba74c9875f" name="Client">
       <dependencyToLayers>
-        <dependencyFromLayerToLayer Id="021ab981-2952-47e3-8cfa-87e3061ef652" direction="Forward">
-          <layerMoniker Id="896d2664-5526-4154-82c6-97b7c2d1e809" />
+        <dependencyFromLayerToLayer Id="33e92112-8c85-4c6d-8c92-5d52494f4770" direction="Forward">
+          <layerMoniker Id="df4bcf7a-3843-485c-b6b6-6bdca85292e2" />
         </dependencyFromLayerToLayer>
       </dependencyToLayers>
       <references>
@@ -59,10 +46,11 @@
         </reference>
       </references>
     </layer>
-    <layer Id="896d2664-5526-4154-82c6-97b7c2d1e809" name="Middleware Contract">
+    <layer Id="3fb90c75-6d68-45ac-9dc0-f28d4c1f6bb7" name="Data Layer" />
+    <layer Id="df4bcf7a-3843-485c-b6b6-6bdca85292e2" name="Web Contracts">
       <references>
-        <reference Id="5d00ae31-2c87-493c-bf98-ec0995670366" name="Web.Contract">
-          <ArtifactNode Label="Web.Contract" Category="CodeSchema_Project" Id="(Assembly=&quot;$(PersonalUri)/Visual Studio 2010/Projects/RESTTechnobabble/Web.Contract/Web.Contract.csproj&quot;)">
+        <reference Id="7e306716-fce0-46dd-b7c4-760d4826d90b" name="Web.Contract">
+          <ArtifactNode Label="Web.Contract" Category="CodeSchema_Project" Id="(Assembly=&quot;$(PersonalUri)/visual studio 2010/Projects/RESTTechnobabble/Web.Contract/Web.Contract.csproj&quot;)">
             <Category Ref="CodeSchema_SourceFile" />
           </ArtifactNode>
           <ExpandedNode Id="(Assembly=Contract.Web)" Label="Contract.Web.dll" Category="FileSystem.Category.FileOfType.dll">
@@ -72,13 +60,56 @@
         </reference>
       </references>
     </layer>
-    <layer Id="50f9a5c4-78ef-44df-97bf-f256156ff398" name="Middleware Service">
+    <layer Id="07874e20-2f50-42f6-b6d1-a1104c8de19f" name="Core Contracts">
+      <references>
+        <reference Id="6d5fcacd-ef9f-4ad5-a327-91cd79df464f" name="Core.Contract">
+          <ArtifactNode Label="Core.Contract" Category="CodeSchema_Project" Id="(Assembly=&quot;$(PersonalUri)/visual studio 2010/Projects/RESTTechnobabble/Core.Contract/Core.Contract.csproj&quot;)">
+            <Category Ref="CodeSchema_SourceFile" />
+          </ArtifactNode>
+          <ExpandedNode Id="(Assembly=Contract)" Label="Contract.dll" Category="FileSystem.Category.FileOfType.dll">
+            <LinkCategory Ref="Produces" />
+            <LinkCategory Ref="Represents" />
+          </ExpandedNode>
+        </reference>
+      </references>
+    </layer>
+    <layer Id="902a1a6d-a58b-463e-bcb3-967fe27056b3" name="Core">
       <dependencyToLayers>
-        <dependencyFromLayerToLayer Id="d1caa108-5061-4129-a45b-760a6b3fcef9" direction="Forward">
-          <layerMoniker Id="902a1a6d-a58b-463e-bcb3-967fe27056b3" />
+        <dependencyFromLayerToLayer Id="d219790d-6a49-4006-b935-5e515525cc9d" direction="Forward">
+          <layerMoniker Id="07874e20-2f50-42f6-b6d1-a1104c8de19f" />
         </dependencyFromLayerToLayer>
-        <dependencyFromLayerToLayer Id="c1e23388-e7bb-49c1-8242-d1a1816640e2" direction="Forward">
-          <layerMoniker Id="896d2664-5526-4154-82c6-97b7c2d1e809" />
+      </dependencyToLayers>
+      <references>
+        <reference Id="263eae6b-2db3-44b8-8431-a24669292cbf" name="Core.Service">
+          <ArtifactNode Label="Core.Service" Category="CodeSchema_Project" Id="(Assembly=&quot;$(PersonalUri)/Visual Studio 2010/Projects/RESTTechnobabble/Core.Service/Core.Service.csproj&quot;)">
+            <Category Ref="CodeSchema_SourceFile" />
+          </ArtifactNode>
+          <ExpandedNode Id="(Assembly=Service)" Label="Service.dll" Category="FileSystem.Category.FileOfType.dll">
+            <LinkCategory Ref="Produces" />
+            <LinkCategory Ref="Represents" />
+          </ExpandedNode>
+        </reference>
+        <reference Id="7277d494-8ab2-4ca7-8dc0-336a5484edc4" name="Core.Service.Test">
+          <ArtifactNode Label="Core.Service.Test" Category="CodeSchema_Project" Id="(Assembly=&quot;$(PersonalUri)/visual studio 2010/Projects/RESTTechnobabble/Core.Service.Test/Core.Service.Test.csproj&quot;)">
+            <Category Ref="CodeSchema_SourceFile" />
+          </ArtifactNode>
+          <ExpandedNode Id="(Assembly=Service.Test)" Label="Service.Test.dll" Category="FileSystem.Category.FileOfType.dll">
+            <LinkCategory Ref="Produces" />
+            <LinkCategory Ref="Represents" />
+          </ExpandedNode>
+        </reference>
+      </references>
+    </layer>
+    <layer Id="50f9a5c4-78ef-44df-97bf-f256156ff398" name="Web Services">
+      <dependencyToLayers>
+        <dependencyFromLayerToLayer Id="2bea071a-9389-4e16-9068-abb726b74ea4" direction="Forward">
+          <layerMoniker Id="07874e20-2f50-42f6-b6d1-a1104c8de19f" />
+        </dependencyFromLayerToLayer>
+        <dependencyFromLayerToLayer Id="543571bf-ebfa-49ad-82d5-18ee3dc76243" direction="Forward">
+          <layerMoniker Id="df4bcf7a-3843-485c-b6b6-6bdca85292e2" />
+        </dependencyFromLayerToLayer>
+        <dependencyFromLayerToLayer Id="4df379de-d573-4483-9db0-85ac276e4bb3" direction="Forward">
+          <layerMoniker Id="902a1a6d-a58b-463e-bcb3-967fe27056b3" />
         </dependencyFromLayerToLayer>
       </dependencyToLayers>
       <references>

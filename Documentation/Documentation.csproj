@@ -38,6 +38,16 @@
   </PropertyGroup>
   <ItemGroup>
     <Content Include="index.htm" />
+    <Content Include="RESTTechnobabble\assemblies.PNG" />
+    <Content Include="RESTTechnobabble\layers.PNG" />
+    <Content Include="RESTTechnobabble\projects.PNG" />
+    <Content Include="RESTTechnobabble\restapi.PNG" />
+    <Content Include="RESTTechnobabble\unittest.PNG" />
+    <Content Include="RESTTechnobabble\vsintegration.PNG" />
+    <Content Include="RESTTechnobabble\webclient.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="AssemblyDependencies.dgml" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

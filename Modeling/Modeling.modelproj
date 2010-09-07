@@ -96,6 +96,10 @@
       <Name>Host.ConsoleApp</Name>
       <Project>{0ab14435-efcb-4822-92e4-7f8e01b88817}</Project>
     </ProjectReference>
+    <ProjectReference Include="..\Host.WebApp\Host.WebApp.csproj">
+      <Name>Host.WebApp</Name>
+      <Project>{1b945150-4a0c-4c82-9f73-f2c868d29fea}</Project>
+    </ProjectReference>
     <ProjectReference Include="..\Web.Contract\Web.Contract.csproj">
       <Name>Web.Contract</Name>
       <Project>{d48e9995-7acc-40bf-b13a-b62ef1ba278b}</Project>

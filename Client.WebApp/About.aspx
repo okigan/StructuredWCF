@@ -8,6 +8,6 @@
         About
     </h2>
     <p>
-        Put content here.
+        Sample by Igor Okulist.
     </p>
 </asp:Content>
