@@ -1,12 +1,6 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 11.00
 # Visual Studio 2010
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Host.ConsoleApp", "Host.ConsoleApp\Host.ConsoleApp.csproj", "{0AB14435-EFCB-4822-92E4-7F8E01B88817}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Host.WebApp", "Host.WebApp\Host.WebApp.csproj", "{1B945150-4A0C-4C82-9F73-F2C868D29FEA}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Client.WebApp", "Client.WebApp\Client.WebApp.csproj", "{01687201-FD2B-41DF-A52D-82FB8DE9ACF4}"
-EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{B5793851-047B-4C1D-8511-AC2D088DCD21}"
 	ProjectSection(SolutionItems) = preProject
 		Local.testsettings = Local.testsettings
@@ -14,25 +8,31 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		TraceAndTestImpact.testsettings = TraceAndTestImpact.testsettings
 	EndProjectSection
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Host.ConsoleApp", "20 Host\Host.ConsoleApp\Host.ConsoleApp.csproj", "{0AB14435-EFCB-4822-92E4-7F8E01B88817}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Host.WebApp", "20 Host\Host.WebApp\Host.WebApp.csproj", "{1B945150-4A0C-4C82-9F73-F2C868D29FEA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Client.WebApp", "10 Client\Client.WebApp\Client.WebApp.csproj", "{01687201-FD2B-41DF-A52D-82FB8DE9ACF4}"
+EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "10 Client", "10 Client", "{66B04D89-0C02-4A9D-9FF2-42AA37728984}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "20 Host", "20 Host", "{50C16705-256D-46D5-A245-52924D1C787E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Core.Contract", "Core.Contract\Core.Contract.csproj", "{D7DC1C60-CDEA-4B45-A346-4D4232140A04}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Core.Contract", "40 Core\Core.Contract\Core.Contract.csproj", "{D7DC1C60-CDEA-4B45-A346-4D4232140A04}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Core.Service", "Core.Service\Core.Service.csproj", "{ED14E3A1-6B97-4D27-A3A7-416EC5E7E72E}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Core.Service", "40 Core\Core.Service\Core.Service.csproj", "{ED14E3A1-6B97-4D27-A3A7-416EC5E7E72E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Core.Service.Test", "Core.Service.Test\Core.Service.Test.csproj", "{63B23EE1-621E-46CF-BC64-6A79024D4503}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Core.Service.Test", "40 Core\Core.Service.Test\Core.Service.Test.csproj", "{63B23EE1-621E-46CF-BC64-6A79024D4503}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Web.Service", "Web.Service\Web.Service.csproj", "{5AE4CD20-2366-433A-82E2-DA22BA144A74}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Web.Service", "30 Web\Web.Service\Web.Service.csproj", "{5AE4CD20-2366-433A-82E2-DA22BA144A74}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Web.Contract", "Web.Contract\Web.Contract.csproj", "{D48E9995-7ACC-40BF-B13A-B62EF1BA278B}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Web.Contract", "30 Web\Web.Contract\Web.Contract.csproj", "{D48E9995-7ACC-40BF-B13A-B62EF1BA278B}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "50 DataLayer", "50 DataLayer", "{9B2E07DF-3B24-495C-A7E2-C8FE3D62DA14}"
 EndProject
-Project("{F088123C-0E9E-452A-89E6-6BA2F21D5CAC}") = "Modeling", "Modeling\Modeling.modelproj", "{DC1E3E73-6734-4C27-87FC-498F24CBEE29}"
+Project("{F088123C-0E9E-452A-89E6-6BA2F21D5CAC}") = "Modeling", "00 Documentation\Modeling\Modeling.modelproj", "{DC1E3E73-6734-4C27-87FC-498F24CBEE29}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Documentation", "Documentation\Documentation.csproj", "{08880C3E-B305-4E5A-ACD9-2D7EAEFB4CEB}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Documentation", "00 Documentation\Documentation\Documentation.csproj", "{08880C3E-B305-4E5A-ACD9-2D7EAEFB4CEB}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "00 Documentation", "00 Documentation", "{E47FD459-2C96-4D76-A644-2D211AD132EB}"
 EndProject
