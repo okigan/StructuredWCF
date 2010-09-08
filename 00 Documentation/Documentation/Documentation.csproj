@@ -40,6 +40,8 @@
     <Content Include="index.htm" />
     <Content Include="RESTTechnobabble\assemblies.PNG" />
     <Content Include="RESTTechnobabble\layers.PNG" />
+    <Content Include="RESTTechnobabble\logo.large.png" />
+    <Content Include="RESTTechnobabble\logo128px.png" />
     <Content Include="RESTTechnobabble\projects.PNG" />
     <Content Include="RESTTechnobabble\restapi.PNG" />
     <Content Include="RESTTechnobabble\unittest.PNG" />

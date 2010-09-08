@@ -75,38 +75,4 @@
       <DependentUpon>LayerDiagram1.layerdiagram</DependentUpon>
     </Validate>
   </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\Client.WebApp\Client.WebApp.csproj">
-      <Name>Client.WebApp</Name>
-      <Project>{01687201-fd2b-41df-a52d-82fb8de9acf4}</Project>
-    </ProjectReference>
-    <ProjectReference Include="..\Core.Contract\Core.Contract.csproj">
-      <Name>Core.Contract</Name>
-      <Project>{d7dc1c60-cdea-4b45-a346-4d4232140a04}</Project>
-    </ProjectReference>
-    <ProjectReference Include="..\Core.Service.Test\Core.Service.Test.csproj">
-      <Name>Core.Service.Test</Name>
-      <Project>{63b23ee1-621e-46cf-bc64-6a79024d4503}</Project>
-    </ProjectReference>
-    <ProjectReference Include="..\Core.Service\Core.Service.csproj">
-      <Name>Core.Service</Name>
-      <Project>{ed14e3a1-6b97-4d27-a3a7-416ec5e7e72e}</Project>
-    </ProjectReference>
-    <ProjectReference Include="..\Host.ConsoleApp\Host.ConsoleApp.csproj">
-      <Name>Host.ConsoleApp</Name>
-      <Project>{0ab14435-efcb-4822-92e4-7f8e01b88817}</Project>
-    </ProjectReference>
-    <ProjectReference Include="..\Host.WebApp\Host.WebApp.csproj">
-      <Name>Host.WebApp</Name>
-      <Project>{1b945150-4a0c-4c82-9f73-f2c868d29fea}</Project>
-    </ProjectReference>
-    <ProjectReference Include="..\Web.Contract\Web.Contract.csproj">
-      <Name>Web.Contract</Name>
-      <Project>{d48e9995-7acc-40bf-b13a-b62ef1ba278b}</Project>
-    </ProjectReference>
-    <ProjectReference Include="..\Web.Service\Web.Service.csproj">
-      <Name>Web.Service</Name>
-      <Project>{5ae4cd20-2366-433a-82e2-da22ba144a74}</Project>
-    </ProjectReference>
-  </ItemGroup>
 </Project>
