@@ -4,10 +4,11 @@
     <title></title>
 </head>
 <body>
+    <a href="#IntegrationWithVS">Jump to Integration with Visual Studio.</a>
     <h2>
         Introduction</h2>
     <p>
-        For most develops Visual Studio is the best tool for the job. And due to variety
+        For most developers Visual Studio is the best tool for the job. And due to variety
         of factors it is also often the only one. It comes with plethora of project templates
         to get a developer started or to aid to a seasoned professional. Regrettably, the
         templates are often oversimplified samples that end up in the real products for
@@ -23,18 +24,15 @@
     <h2>
         Background</h2>
     <p>
-        For illustration purposes the article is structured around a fantom web service
+        For illustration purposes the article is structured around a phantom web service
         built atop of WCF. The service exposes a collection of resources through REST, which
         in turn can be hosted in IIS or stand alone. Also sample web client application
         is included, as well as unit test for the core logic.</p>
     <p>
-        The project template will be hosted at <a href="http://visualstudiogallery.msdn.microsoft.com/en-us/">
-            Visual Studio Gallery</a>. Check back for the updated reference.</p>
-    <p>
         The notion of separating software projects into layers has been around for a while,
         but still there seems to be a lot confusion on terminology and techniques. Particularly,
-        such such discussion(s) often intermix tier separation and software layers, hence
-        and introductory article <a href="http://msdn.microsoft.com/en-us/library/aa905336.aspx">
+        such discussion(s) often intermix tier separation and software layers, hence an
+        introductory article <a href="http://msdn.microsoft.com/en-us/library/aa905336.aspx">
             "Pragmatic Architecture: Layering" by Ted Neward</a> is recommended.
     </p>
     <h2>
@@ -66,7 +64,7 @@
                     <ul>
                         <li>Solution folders are prefixed with two digit number (ex. 10, 20) for ordering purposes.</li>
                         <li>Project compilation is (still) controlled by project dependencies settings.</li>
-                        <li>Project/layer dependencies is visually conveyed to the developer, ie.: </li>
+                        <li>Project/layer dependencies is visually conveyed to the developer, i.e.: </li>
                         <li>Projects at the top depend on lower [layer] projects</li>
                     </ul>
                 </p>
@@ -82,7 +80,7 @@
             </td>
             <td style="vertical-align: top">
                 <p>
-                    The diagram next to this paragraph shows the web service, it's contract, hosting
+                    The diagram next to this paragraph shows the web service, its contract, hosting
                     and client(s) are allocated to different layers. Arrows on the diagram show <strong>
                         compile time</strong> dependencies between the different layers.
                 </p>
@@ -95,8 +93,8 @@
                     <li>Host -- hosting of the web service (i.e. IIS hosting or stand alone)</li>
                     <li>Client -- the client application(s)</li>
                 </ul>
-                *Note: To limit scope the web service stores information in memory and the corresponding
-                logic was not factored out into separate data layer.
+                *Note: To limit the scope of this web service project information is stored in memory
+                and the corresponding logic is not factored out into separate data layer.
                 <p>
                     Key points on the diagram for the layers and their dependencies:
                 </p>
@@ -113,8 +111,7 @@
     <table>
         <tr>
             <td>
-                <img src="RESTTechnobabble/assemblies.PNG" alt="Assemblies" 
-                    style="width: 419px" />
+                <img src="RESTTechnobabble/assemblies.PNG" alt="Assemblies" style="width: 419px" />
             </td>
             <td style="vertical-align: top">
                 <p>
@@ -153,14 +150,13 @@
     <table>
         <tr>
             <td>
-                <img src="RESTTechnobabble/webclient.PNG" 
-                    alt="REST Technobabble web client snapshot" style="height: 379px" />
+                <img src="RESTTechnobabble/webclient.PNG" alt="REST Technobabble web client snapshot"
+                    style="height: 379px" />
             </td>
         </tr>
         <tr>
             <td>
-                <img src="RESTTechnobabble/restapi.PNG" alt="REST api snapshot" 
-                    style="height: 383px" />
+                <img src="RESTTechnobabble/restapi.PNG" alt="REST api snapshot" style="height: 383px" />
             </td>
         </tr>
     </table>
@@ -176,7 +172,7 @@
     <ul>
         <li>Separation of concerns -- each project is focused on smaller more specific task</li>
         <li>Client side assemblies depend only on the definition of the contracts and hence
-            no implementation assemblies need to be deployed to the client size. </li>
+            no implementation assemblies need to be deployed to the client side. </li>
         <li>Number of assemblies deployed on a client is reduced (hence smaller deployment size)</li>
         <li>Corrections in service implementation can be implemented without redeployment of
             the client assemblies.</li>
@@ -197,7 +193,7 @@
         the system/integration level testing required when Client and Web services are involved.</p>
     <img src="RESTTechnobabble/unittest.PNG" alt="Unit test results" />
     <p>
-        Additionally the Web and Host projects can focus on their targets which are very
+        Additionally, the Web and Host projects can focus on their targets which are very
         technology specifics and rapidly change over time. Today the services are implemented
         with WCF and hosted in IIS through a ASP.NET project or a standalone executable,
         tomorrow it could be a Windows(r) service or yet something else.</p>
@@ -211,12 +207,20 @@
         identical calls to delete a resource is not an error condition (which it is in general
         procedural programming).
     </p>
-    <h2>
-        Visual Studio integration</h2>
+    <h2 id="IntegrationWithVS">
+        Integration with Visual Studio</h2>
     <p>
-        Below is shown a snapshot of Visual Studio integration with the wizard which creates
-        the projects according to above layout and structure.</p>
-    <img width="600px" src="RESTTechnobabble/vsintegration.PNG" alt="Visual studio integration" />
+        And in conclusion to the best part: all of the above can be reasonably reused though
+        a new Visual Studio template. To install the template you can navigate to <a href="http://visualstudiogallery.msdn.microsoft.com/en-us/e6c5626e-bb2f-4b6c-81a4-630a38a01489">
+            Visual Studio Gallery</a> or even simpler use Visual Studio itself to install
+        it:
+        <ol>
+            <li>Open new project dialog in Visual Studio</li>
+            <li>Type in the search term: "structured"</li>
+            <li>Select the "Structured WCF REST Service" item, and proceed with the wizard.</li>
+        </ol>
+        If everything works you should see a dialog a the one shown below</p>
+    <img width="600px" src="RESTTechnobabble/vsinstall.PNG" alt="Visual studio install" />
     <h2>
         References</h2>
     <p>
@@ -231,6 +235,8 @@
                 cast with Miguel Castro.</a> -- Reinforced my views on project organization and
                 gives that hope separation of concerns will be evangelized along side with .NET
                 technologies.</li>
+            <li><a href="http://www.wordle.net/">Wordle</a> was used to generate the technobabble
+                logo.</li>
         </ul>
 </body>
 </html>

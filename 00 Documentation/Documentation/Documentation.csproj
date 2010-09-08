@@ -45,6 +45,7 @@
     <Content Include="RESTTechnobabble\projects.PNG" />
     <Content Include="RESTTechnobabble\restapi.PNG" />
     <Content Include="RESTTechnobabble\unittest.PNG" />
+    <Content Include="RESTTechnobabble\vsinstall.PNG" />
     <Content Include="RESTTechnobabble\vsintegration.PNG" />
     <Content Include="RESTTechnobabble\webclient.PNG" />
   </ItemGroup>
