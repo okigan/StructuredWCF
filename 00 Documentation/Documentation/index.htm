@@ -33,7 +33,7 @@
         but still there seems to be a lot confusion on terminology and techniques. Particularly,
         such discussion(s) often intermix tier separation and software layers, hence an
         introductory article <a href="http://msdn.microsoft.com/en-us/library/aa905336.aspx">
-            "Pragmatic Architecture: Layering" by Ted Neward</a> is recommended.
+            &quot;Pragmatic Architecture: Layering&quot; by Ted Neward</a> is recommended.
     </p>
     <h2>
         Web service -- the 'REST Technobabble'</h2>
@@ -48,9 +48,10 @@
     <h2>
         Projects</h2>
     <table>
+        <tbody>
         <tr>
             <td>
-                <img src="RESTTechnobabble/projects.PNG" alt="Projects" />
+                <img alt="Projects" src="RESTTechnobabble/projects.PNG" >
             </td>
             <td style="vertical-align: top">
                 <p>
@@ -61,22 +62,25 @@
                 </p>
                 <p>
                     Key points about solution folders and projects:
+                </p>
                     <ul>
                         <li>Solution folders are prefixed with two digit number (ex. 10, 20) for ordering purposes.</li>
                         <li>Project compilation is (still) controlled by project dependencies settings.</li>
                         <li>Project/layer dependencies is visually conveyed to the developer, i.e.: </li>
                         <li>Projects at the top depend on lower [layer] projects</li>
                     </ul>
-                </p>
+
             </td>
         </tr>
+    </tbody>
     </table>
     <h2>
         Layers</h2>
     <table>
+        <tbody>
         <tr>
             <td>
-                <img src="RESTTechnobabble/layers.PNG" alt="Layers" style="width: 423px" />
+                <img alt="Layers" height="329" src="RESTTechnobabble/layers.PNG" width="423">
             </td>
             <td style="vertical-align: top">
                 <p>
@@ -105,13 +109,15 @@
                 </ul>
             </td>
         </tr>
+    </tbody>
     </table>
     <h2>
         Assemblies</h2>
     <table>
+        <tbody>
         <tr>
             <td>
-                <img src="RESTTechnobabble/assemblies.PNG" alt="Assemblies" style="width: 419px" />
+                <img alt="Assemblies" height="298" src="RESTTechnobabble/assemblies.PNG" width="418" >
             </td>
             <td style="vertical-align: top">
                 <p>
@@ -132,6 +138,7 @@
                 </ul>
             </td>
         </tr>
+    </tbody>
     </table>
     <h2>
         Running the sample</h2>
@@ -144,21 +151,22 @@
         application that consumes and allows to manipulate the technobabble phrases (after
         all, technobabble is always evolving).</p>
     <p>
-        All projects have corresponding dependencies setup and hence <strong>Build&Run of Client.WebApp</strong>
-        project shall be sufficient. Otherwise you can Build&Run the Host.WebApp project
-        followed by (Build&Run) of the Client.WebApp project.</p>
+        All projects have corresponding dependencies setup and hence <strong>Build&amp;Run of Client.WebApp</strong>
+        project shall be sufficient. Otherwise you can Build&amp;Run the Host.WebApp project
+        followed by (Build&amp;Run) of the Client.WebApp project.</p>
     <table>
+        <tbody>
         <tr>
             <td>
-                <img src="RESTTechnobabble/webclient.PNG" alt="REST Technobabble web client snapshot"
-                    style="height: 379px" />
+                <img alt="REST Technobabble web client snapshot" height="374" src="RESTTechnobabble/webclient.PNG" width="372" />
             </td>
         </tr>
         <tr>
             <td>
-                <img src="RESTTechnobabble/restapi.PNG" alt="REST api snapshot" style="height: 383px" />
+                <img alt="REST api snapshot" height="383" src="RESTTechnobabble/restapi.PNG" width="377" />
             </td>
         </tr>
+    </tbody>
     </table>
     <h2>
         Benefits</h2>
@@ -166,7 +174,7 @@
         Most obvious difference when compared to Visual Studio default WCF/REST template
         and the one shown here is the number of projects involved. But is it actually better?</p>
     <p>
-        Well, the answer is the venerable : "It depends", but here are some beneficial aspects
+        Well, the answer is the venerable : &quot;It depends&quot;, but here are some beneficial aspects
         of this approach:
     </p>
     <ul>
@@ -176,8 +184,7 @@
         <li>Number of assemblies deployed on a client is reduced (hence smaller deployment size)</li>
         <li>Corrections in service implementation can be implemented without redeployment of
             the client assemblies.</li>
-        <li>Much easier implementation of unit test(s) for the functionality in the <span
-            class="term">Core layer</span>.</li>
+        <li>Much easier implementation of unit test(s) for the functionality in the <span class="term">Core layer</span>.</li>
         <li>Easier to address different API semantics (ex. stateless aspect of REST vs. stateful
             usage on internal API exposed by <span class="term">Core layer</span>)</li>
         <li>Web and Host projects can focus on their targets which are very technology specifics
@@ -191,7 +198,7 @@
         development practices. Because, it has limited dependency on the deployment infrastructure
         the unit test for it can be implemented much easier. Especially, when compared to
         the system/integration level testing required when Client and Web services are involved.</p>
-    <img src="RESTTechnobabble/unittest.PNG" alt="Unit test results" />
+    <img alt="Unit test results" src="RESTTechnobabble/unittest.PNG" />
     <p>
         Additionally, the Web and Host projects can focus on their targets which are very
         technology specifics and rapidly change over time. Today the services are implemented
@@ -214,13 +221,15 @@
         a new Visual Studio template. To install the template you can navigate to <a href="http://visualstudiogallery.msdn.microsoft.com/en-us/e6c5626e-bb2f-4b6c-81a4-630a38a01489">
             Visual Studio Gallery</a> or even simpler use Visual Studio itself to install
         it:
+        </p>
         <ol>
             <li>Open new project dialog in Visual Studio</li>
-            <li>Type in the search term: "structured"</li>
-            <li>Select the "Structured WCF REST Service" item, and proceed with the wizard.</li>
+            <li>Type in the search term: &quot;structured&quot;</li>
+            <li>Select the &quot;Structured WCF REST Service&quot; item, and proceed with the wizard.</li>
         </ol>
-        If everything works you should see a dialog a the one shown below</p>
-    <img width="600px" src="RESTTechnobabble/vsinstall.PNG" alt="Visual studio install" />
+        If everything works you should see a dialog a the one shown below<p></p>
+    <a href="http://visualstudiogallery.msdn.microsoft.com/en-us/e6c5626e-bb2f-4b6c-81a4-630a38a01489">
+    <img alt="Visual studio install" class="auto-style1" height="412" src="RESTTechnobabble/vsinstall.PNG" width="600" /></a>
     <h2>
         References</h2>
     <p>
@@ -228,9 +237,10 @@
         presentation/business logic/data access tiers are available -- in fact to may to
         list here. Nevertheless, practical advise is rare. Following references where used
         for this article:
+        </p>
         <ul>
-            <li><a href="http://msdn.microsoft.com/en-us/library/aa905336.aspx">"Pragmatic Architecture:
-                Layering" by Ted Neward</a></li>
+            <li><a href="http://msdn.microsoft.com/en-us/library/aa905336.aspx">&quot;Pragmatic Architecture:
+                Layering&quot; by Ted Neward</a></li>
             <li><a href="http://perseus.franklins.net/dnrtvplayer/player.aspx?ShowNum=0122">Video
                 cast with Miguel Castro.</a> -- Reinforced my views on project organization and
                 gives that hope separation of concerns will be evangelized along side with .NET
