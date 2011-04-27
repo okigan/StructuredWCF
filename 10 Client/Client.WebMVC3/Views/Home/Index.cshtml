@@ -1,4 +1,6 @@
-﻿@{
+﻿@model IList<Web.Contract.SampleItem> 
+
+@{
     ViewBag.Title = "Home Page";
 }
 
@@ -6,3 +8,11 @@
 <p>
     To learn more about ASP.NET MVC visit <a href="http://asp.net/mvc" title="ASP.NET MVC Website">http://asp.net/mvc</a>.
 </p>
+
+@if (null != Model && Model.Count > 0) {
+    <ul>
+    @foreach (var item in Model) {
+        <li>@item.StringValue</li>
+    }
+    </ul>
+}
