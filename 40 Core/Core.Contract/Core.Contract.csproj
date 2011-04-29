@@ -5,11 +5,11 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProductVersion>8.0.30703</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{D7DC1C60-CDEA-4B45-A346-4D4232140A04}</ProjectGuid>
+    <ProjectGuid>{4ADE9AC5-0019-49C9-BF7B-7DB2F0E9C0E7}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Contract</RootNamespace>
-    <AssemblyName>Contract</AssemblyName>
+    <RootNamespace>Core.Contract</RootNamespace>
+    <AssemblyName>Core.Contract</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>

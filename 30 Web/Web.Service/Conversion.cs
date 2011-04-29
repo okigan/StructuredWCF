@@ -19,7 +19,7 @@ namespace Web.Service {
 
         public static IList<Web.Contract.SampleItem> ToWeb(IList<Core.Contract.SampleItem> list) {
             IList<Web.Contract.SampleItem> listWeb = new List<Web.Contract.SampleItem>();
-            foreach(var b in list) {
+            foreach (var b in list) {
                 listWeb.Add(ToWeb(b));
             }
             return listWeb;

@@ -8,10 +8,10 @@
 //------------------------------------------------------------------------------
 
 namespace Client.WebApp {
-    
-    
+
+
     public partial class _Default {
-        
+
         /// <summary>
         /// GridView1 control.
         /// </summary>
@@ -20,7 +20,7 @@ namespace Client.WebApp {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.GridView GridView1;
-        
+
         /// <summary>
         /// ObjectDataSource1 control.
         /// </summary>

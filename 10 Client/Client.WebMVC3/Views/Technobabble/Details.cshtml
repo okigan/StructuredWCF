@@ -1,0 +1,19 @@
+﻿@model Web.Contract.SampleItem
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<fieldset>
+    <legend>SampleItem</legend>
+
+    <div class="display-label">StringValue</div>
+    <div class="display-field">@Model.StringValue</div>
+</fieldset>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id=Model.Id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
+

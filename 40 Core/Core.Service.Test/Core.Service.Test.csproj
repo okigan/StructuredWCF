@@ -6,11 +6,11 @@
     <ProductVersion>
     </ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{63B23EE1-621E-46CF-BC64-6A79024D4503}</ProjectGuid>
+    <ProjectGuid>{880CC245-BDB8-43D7-A731-678F53C9F491}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Service.Test</RootNamespace>
-    <AssemblyName>Service.Test</AssemblyName>
+    <RootNamespace>Core.Service.Test</RootNamespace>
+    <AssemblyName>Core.Service.Test</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{3AC096D0-A1C2-E12C-1390-A8335801FDAB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>

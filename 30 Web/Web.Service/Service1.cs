@@ -10,8 +10,7 @@ namespace Web.Service {
     [ServiceBehavior(InstanceContextMode = InstanceContextMode.Single)]
     // If the service is renamed, remember to update the global.asax.cs file
     // and/or the web.config and/or the corresponding *.svc file
-    public class TechnobabbleService : Web.Contract.ITechnobabble
-    {
+    public class TechnobabbleService : Web.Contract.ITechnobabble {
         Core.Contract.ITechnobabble impl = null;
 
         public TechnobabbleService() {
@@ -42,7 +41,7 @@ namespace Web.Service {
         void Web.Contract.ITechnobabble.Delete(string id) {
             try {
                 impl.Delete(int.Parse(id));
-            } catch(KeyNotFoundException ) {
+            } catch (KeyNotFoundException) {
                 //HTTP Delete is idempotent, hence delete with key that is no longer found
                 //is not an error
                 //NOTE: this HTTP/REST concept does not propogate/alter the internal 

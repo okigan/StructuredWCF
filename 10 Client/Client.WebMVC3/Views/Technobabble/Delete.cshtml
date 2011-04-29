@@ -1,0 +1,21 @@
+﻿@model Web.Contract.SampleItem
+@{
+    ViewBag.Title = "Delete";
+}
+<h2>
+    Delete</h2>
+<h3>
+    Are you sure you want to delete this?</h3>
+<fieldset>
+    <legend>SampleItem</legend>
+    <div class="display-label">
+        StringValue</div>
+    <div class="display-field">@Model.StringValue</div>
+</fieldset>
+@using (Html.BeginForm()) {
+    <p>
+        <input type="submit" value="Delete" />
+        |
+        @Html.ActionLink("Back to List", "Index")
+    </p>
+}
