@@ -3,76 +3,63 @@ The base color for this template is #5c87b2. If you'd like
 to use a different color start by replacing all instances of
 #5c87b2 with your new color.
 ----------------------------------------------------------*/
-body
-{
+body {
     background-color: #5c87b2;
     font-size: 75%;
-    font-family: Verdana, Tahoma, Arial, "Helvetica Neue", Helvetica, Sans-Serif;
+    font-family: Verdana, Tahoma, Arial, "Helvetica Neue" , Helvetica, Sans-Serif;
     margin: 0;
     padding: 0;
     color: #696969;
 }
 
-a:link
-{
+a:link {
     color: #034af3;
     text-decoration: underline;
 }
-a:visited
-{
+a:visited {
     color: #505abc;
 }
-a:hover
-{
+a:hover {
     color: #1d60ff;
     text-decoration: none;
 }
-a:active
-{
+a:active {
     color: #12eb87;
 }
 
-p, ul
-{
+p, ul {
     margin-bottom: 20px;
     line-height: 1.6em;
 }
 
 /* HEADINGS   
 ----------------------------------------------------------*/
-h1, h2, h3, h4, h5, h6
-{
+h1, h2, h3, h4, h5, h6 {
     font-size: 1.5em;
     color: #000;
 }
 
-h1
-{
+h1 {
     font-size: 2em;
     padding-bottom: 0;
     margin-bottom: 0;
 }
-h2
-{
+h2 {
     padding: 0 0 10px 0;
 }
-h3
-{
+h3 {
     font-size: 1.2em;
 }
-h4
-{
+h4 {
     font-size: 1.1em;
 }
-h5, h6
-{
+h5, h6 {
     font-size: 1em;
 }
 
 /* this rule styles <h2> tags that are the 
 first child of the left and right table columns */
-.rightColumn > h1, .rightColumn > h2, .leftColumn > h1, .leftColumn > h2
-{
+.rightColumn > h1, .rightColumn > h2, .leftColumn > h1, .leftColumn > h2 {
     margin-top: 0;
 }
 
@@ -81,23 +68,20 @@ first child of the left and right table columns */
 
 /* you can specify a greater or lesser percentage for the 
 page width. Or, you can specify an exact pixel width. */
-.page
-{
+.page {
     width: 90%;
     margin-left: auto;
     margin-right: auto;
 }
 
-#header
-{
+#header {
     position: relative;
     margin-bottom: 0px;
     color: #000;
     padding: 0;
 }
 
-#header h1
-{
+#header h1 {
     font-weight: bold;
     padding: 5px 0;
     margin: 0;
@@ -107,16 +91,14 @@ page width. Or, you can specify an exact pixel width. */
     font-size: 32px !important;
 }
 
-#main
-{
+#main {
     padding: 30px 30px 15px 30px;
     background-color: #fff;
     margin-bottom: 30px;
-    _height: 1px; /* only IE6 applies CSS properties starting with an underscore */
+    _height: 1px; /* only IE6 applies CSS properties starting with an underscore */ 
 }
 
-#footer
-{
+#footer {
     color: #999;
     padding: 10px 0;
     text-align: center;
@@ -127,8 +109,7 @@ page width. Or, you can specify an exact pixel width. */
 
 /* TAB MENU   
 ----------------------------------------------------------*/
-ul#menu
-{
+ul#menu {
     border-bottom: 1px #5C87B2 solid;
     padding: 0 0 2px;
     position: relative;
@@ -136,14 +117,12 @@ ul#menu
     text-align: right;
 }
 
-ul#menu li
-{
+ul#menu li {
     display: inline;
     list-style: none;
 }
 
-ul#menu li#greeting
-{
+ul#menu li#greeting {
     padding: 10px 20px;
     font-weight: bold;
     text-decoration: none;
@@ -151,8 +130,7 @@ ul#menu li#greeting
     color: #fff;
 }
 
-ul#menu li a
-{
+ul#menu li a {
     padding: 10px 20px;
     font-weight: bold;
     text-decoration: none;
@@ -161,20 +139,17 @@ ul#menu li a
     color: #034af3;
 }
 
-ul#menu li a:hover
-{
+ul#menu li a:hover {
     background-color: #fff;
     text-decoration: none;
 }
 
-ul#menu li a:active
-{
+ul#menu li a:active {
     background-color: #a6e2a6;
     text-decoration: none;
 }
 
-ul#menu li.selected a
-{
+ul#menu li.selected a {
     background-color: #fff;
     color: #000;
 }
@@ -182,32 +157,27 @@ ul#menu li.selected a
 /* FORM LAYOUT ELEMENTS   
 ----------------------------------------------------------*/
 
-fieldset 
-{
-    border:1px solid #ddd;
-    padding:0 1.4em 1.4em 1.4em;
-    margin:0 0 1.5em 0;
+fieldset {
+    border: 1px solid #ddd;
+    padding: 0 1.4em 1.4em 1.4em;
+    margin: 0 0 1.5em 0;
 }
 
-legend 
-{
-    font-size:1.2em;
+legend {
+    font-size: 1.2em;
     font-weight: bold;
 }
 
-textarea 
-{
+textarea {
     min-height: 75px;
 }
 
-input[type="text"] 
-{
+input[type="text"] {
     width: 200px;
     border: 1px solid #CCC;
 }
 
-input[type="password"] 
-{
+input[type="password"] {
     width: 200px;
     border: 1px solid #CCC;
 }
@@ -215,131 +185,113 @@ input[type="password"]
 /* TABLE
 ----------------------------------------------------------*/
 
-table 
-{
-  border: solid 1px #e8eef4;
-  border-collapse: collapse;
+table {
+    border: solid 1px #e8eef4;
+    border-collapse: collapse;
 }
 
-table td 
-{
-  padding: 5px;   
-  border: solid 1px #e8eef4;
+table td {
+    padding: 5px;
+    border: solid 1px #e8eef4;
 }
 
-table th
-{
-  padding: 6px 5px;
-  text-align: left;
-  background-color: #e8eef4; 
-  border: solid 1px #e8eef4;   
+table th {
+    padding: 6px 5px;
+    text-align: left;
+    background-color: #e8eef4;
+    border: solid 1px #e8eef4;
 }
 
 /* MISC  
 ----------------------------------------------------------*/
-.clear
-{
+.clear {
     clear: both;
 }
 
-.error
-{
-    color:Red;
+.error {
+    color: Red;
 }
 
-#menucontainer
-{
-    margin-top:40px;
+#menucontainer {
+    margin-top: 40px;
 }
 
-div#title
-{
-    display:block;
-    float:left;
-    text-align:left;
+div#title {
+    display: block;
+    float: left;
+    text-align: left;
 }
 
-#logindisplay
-{
-    font-size:1.1em;
-    display:block;
-    text-align:right;
-    margin:10px;
-    color:White;
+#logindisplay {
+    font-size: 1.1em;
+    display: block;
+    text-align: right;
+    margin: 10px;
+    color: White;
 }
 
-#logindisplay a:link
-{
+#logindisplay a:link {
     color: white;
     text-decoration: underline;
 }
 
-#logindisplay a:visited
-{
+#logindisplay a:visited {
     color: white;
     text-decoration: underline;
 }
 
-#logindisplay a:hover
-{
+#logindisplay a:hover {
     color: white;
     text-decoration: none;
 }
 
 /* Styles for validation helpers
 -----------------------------------------------------------*/
-.field-validation-error
-{
+.field-validation-error {
     color: #ff0000;
 }
 
-.field-validation-valid
-{
+.field-validation-valid {
     display: none;
 }
 
-.input-validation-error
-{
+.input-validation-error {
     border: 1px solid #ff0000;
     background-color: #ffeeee;
 }
 
-.validation-summary-errors
-{
+.validation-summary-errors {
     font-weight: bold;
     color: #ff0000;
 }
 
-.validation-summary-valid
-{
+.validation-summary-valid {
     display: none;
 }
 
 /* Styles for editor and display helpers
 ----------------------------------------------------------*/
-.display-label,
-.editor-label
-{
+.display-label, .editor-label {
     margin: 1em 0 0 0;
 }
 
-.display-field,
-.editor-field
-{
-    margin:0.5em 0 0 0;
+.display-field, .editor-field {
+    margin: 0.5em 0 0 0;
 }
 
-.text-box
-{
+.text-box {
     width: 30em;
 }
 
-.text-box.multi-line
-{
+.text-box.multi-line {
     height: 6.5em;
 }
 
-.tri-state
-{
+.tri-state {
     width: 6em;
+}
+
+
+#main table {
+    margin: 0px auto;
 }

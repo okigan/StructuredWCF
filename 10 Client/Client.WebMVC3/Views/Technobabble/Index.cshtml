@@ -7,24 +7,19 @@
 </p>
 <table>
     <tr>
-        <th>
-        </th>
-        <th>
-            Id
-        </th>
-        <th>
-            StringValue
-        </th>
+        <th></th>
+        <th>Id</th>
+        <th>StringValue</th>
     </tr>
     @foreach (var item in Model) {
-        <tr><td>
-            @Html.ActionLink("Edit", "Edit", new { id = item.Id }) |
-            @Html.ActionLink("Details", "Details", new { id = item.Id }) |
-            @Html.ActionLink("Delete", "Delete", new { id = item.Id })
-        </td><td>
-            @item.Id
-        </td><td>
-            @item.StringValue
-        </td></tr>
+        <tr>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id = item.Id }) |
+                @Html.ActionLink("Details", "Details", new { id = item.Id }) |
+                @Html.ActionLink("Delete", "Delete", new { id = item.Id })
+            </td>
+            <td>@item.Id</td>
+            <td>@item.StringValue</td>
+        </tr>
     }
 </table>
