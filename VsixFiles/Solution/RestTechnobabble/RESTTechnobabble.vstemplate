@@ -21,6 +21,7 @@
       </SolutionFolder>
       <SolutionFolder Name="10 Client">
         <ProjectTemplateLink ProjectName="Client.WebApp">Client.WebApp\Client.WebApp.vstemplate</ProjectTemplateLink>
+        <ProjectTemplateLink ProjectName="Client.WebMVC3">Client.WebMVC3\Client.WebMVC3.vstemplate</ProjectTemplateLink>
       </SolutionFolder>
       <SolutionFolder Name="40 Core">
         <ProjectTemplateLink ProjectName="Core.Contract">Core.Contract\Core.Contract.vstemplate</ProjectTemplateLink>
