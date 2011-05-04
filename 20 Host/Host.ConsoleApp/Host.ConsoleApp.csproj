@@ -5,7 +5,7 @@
     <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
     <ProductVersion>8.0.30703</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{833FF676-077C-408B-B627-33F78DF3B4A4}</ProjectGuid>
+    <ProjectGuid>{0AB14435-EFCB-4822-92E4-7F8E01B88817}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>Host.ConsoleApp</RootNamespace>

@@ -5,11 +5,11 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProductVersion>8.0.30703</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{E41C7406-22E9-4491-975B-34EB7129AF75}</ProjectGuid>
+    <ProjectGuid>{ED14E3A1-6B97-4D27-A3A7-416EC5E7E72E}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Core.Service</RootNamespace>
-    <AssemblyName>Core.Service</AssemblyName>
+    <RootNamespace>Service</RootNamespace>
+    <AssemblyName>Service</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>

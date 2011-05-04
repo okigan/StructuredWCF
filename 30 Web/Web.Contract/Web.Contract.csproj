@@ -5,11 +5,11 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProductVersion>8.0.30703</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{586CB6AE-460D-498B-8E72-7D2B6C26C001}</ProjectGuid>
+    <ProjectGuid>{D48E9995-7ACC-40BF-B13A-B62EF1BA278B}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Web.Contract</RootNamespace>
-    <AssemblyName>Web.Contract</AssemblyName>
+    <RootNamespace>Contract.Web</RootNamespace>
+    <AssemblyName>Contract.Web</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
