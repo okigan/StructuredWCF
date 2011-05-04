@@ -61,6 +61,9 @@ namespace Core.Service {
         }
 
         SampleItem ITechnobabble.Create(SampleItem instance) {
+            //incomming instance.id is ignored and new id is generated here
+            instance.Id = data.Count;
+
             data.Add(instance.Id, instance.StringValue);
 
             return instance;

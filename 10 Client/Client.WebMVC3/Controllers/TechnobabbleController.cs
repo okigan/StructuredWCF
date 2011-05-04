@@ -13,24 +13,27 @@ namespace Client.WebMVC3.Controllers {
 
         static Web.Contract.ITechnobabble s_technobabble = null;
 
+        [HttpGet]
         public ActionResult Index() {
             ViewBag.Message = "Welcome to ASP.NET MVC!";
 
-            Web.Contract.ITechnobabble technobabble = NewMethod();
+            var technobabble = GetChannel();
 
             var list = technobabble.GetCollection();
 
             return View(list);
         }
 
+        [HttpGet]
         public ActionResult Details(int id) {
-            Web.Contract.ITechnobabble technobabble = NewMethod();
+            var technobabble = GetChannel();
 
             var item = technobabble.Get(id.ToString());
 
             return View(item);
         }
 
+        [HttpGet]
         public ActionResult Create() {
             return View();
         }
@@ -38,7 +41,12 @@ namespace Client.WebMVC3.Controllers {
         [HttpPost]
         public ActionResult Create(FormCollection collection) {
             try {
-                // TODO: Add insert logic here
+                var item = new Web.Contract.SampleItem();
+                UpdateModel(item);
+
+                var technobable = GetChannel();
+
+                var newItem = technobable.Create(item);
 
                 return RedirectToAction("Index");
             } catch {
@@ -46,6 +54,7 @@ namespace Client.WebMVC3.Controllers {
             }
         }
 
+        [HttpGet]
         public ActionResult Edit(int id) {
             return View();
         }
@@ -53,7 +62,7 @@ namespace Client.WebMVC3.Controllers {
         [HttpPost]
         public ActionResult Edit(int id, FormCollection collection) {
             try {
-                Web.Contract.ITechnobabble technobabble = NewMethod();
+                var technobabble = GetChannel();
 
                 var item = technobabble.Get(id.ToString());
                 UpdateModel(item);
@@ -66,19 +75,17 @@ namespace Client.WebMVC3.Controllers {
             }
         }
 
+        [HttpGet]
         public ActionResult Delete(int id) {
-            //Note: The "Delete" method here seems more of misnomer as this is more of user experience
-            //as mostly the view logic is different -- hense reusing details logic
+            //Note: The "Delete" method here seems more of a misnomer as this is more of user 
+            //experience as mostly the view logic is different -- hense reusing details logic
             return Details(id);
         }
-
-        //
-        // POST: /Technobabble/Delete/5
 
         [HttpPost]
         public ActionResult Delete(int id, FormCollection collection) {
             try {
-                Web.Contract.ITechnobabble technobabble = NewMethod();
+                var technobabble = GetChannel();
 
                 technobabble.Delete(id.ToString());
 
@@ -89,7 +96,7 @@ namespace Client.WebMVC3.Controllers {
         }
 
         #region Private methods
-        private Web.Contract.ITechnobabble NewMethod() {
+        private Web.Contract.ITechnobabble GetChannel() {
             if (null == s_technobabble) {
                 s_technobabble = factory.CreateChannel();
             }
@@ -97,6 +104,5 @@ namespace Client.WebMVC3.Controllers {
             return s_technobabble;
         }
         #endregion
-
     }
 }

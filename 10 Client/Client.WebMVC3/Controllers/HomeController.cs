@@ -7,8 +7,7 @@ using System.ServiceModel;
 
 namespace Client.WebMVC3.Controllers {
     public class HomeController : Controller {
-
-
+        
         public ActionResult Index() {
             return View();
         }
