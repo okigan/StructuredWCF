@@ -43,10 +43,10 @@ namespace Core.Service {
             ,"Curabitur non velit at REST varius aliquam."
         };
 
-        Dictionary<int, string> data = new Dictionary<int,string>();
+        Dictionary<int, string> data = new Dictionary<int, string>();
 
         public TechnobabbleService() {
-            for(int id = 0; id < babble.Length; id++) {
+            for (int id = 0; id < babble.Length; id++) {
                 data.Add(id, babble[id]);
             }
         }
@@ -54,13 +54,16 @@ namespace Core.Service {
         #region ITechnobabble methods
         IList<SampleItem> ITechnobabble.GetCollection() {
             IList<SampleItem> list = new List<SampleItem>();
-            foreach(var b in data){
+            foreach (var b in data) {
                 list.Add(new SampleItem() { Id = b.Key, StringValue = b.Value });
             }
             return list;
         }
 
         SampleItem ITechnobabble.Create(SampleItem instance) {
+            //incomming instance.id is ignored and new id is generated here
+            instance.Id = data.Count;
+
             data.Add(instance.Id, instance.StringValue);
 
             return instance;
@@ -72,10 +75,10 @@ namespace Core.Service {
         }
 
         SampleItem ITechnobabble.Update(int id, SampleItem instance) {
-            if(!data.ContainsKey(id)){
+            if (!data.ContainsKey(id)) {
                 throw new KeyNotFoundException();
             }
-            
+
             data[id] = instance.StringValue;
             instance.Id = id;
 
@@ -83,7 +86,7 @@ namespace Core.Service {
         }
 
         void ITechnobabble.Delete(int id) {
-            if(!data.ContainsKey(id)) {
+            if (!data.ContainsKey(id)) {
                 throw new KeyNotFoundException();
             }
 

@@ -17,7 +17,7 @@ namespace Client.WebApp.Account {
             FormsAuthentication.SetAuthCookie(RegisterUser.UserName, false /* createPersistentCookie */);
 
             string continueUrl = RegisterUser.ContinueDestinationPageUrl;
-            if(String.IsNullOrEmpty(continueUrl)) {
+            if (String.IsNullOrEmpty(continueUrl)) {
                 continueUrl = "~/";
             }
             Response.Redirect(continueUrl);

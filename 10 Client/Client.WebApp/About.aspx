@@ -9,5 +9,7 @@
     </h2>
     <p>
         Sample by Igor Okulist.
+
+        Learn more about this sample at: http://www.codeproject.com/KB/WCF/RESTTechnobabble.aspx
     </p>
 </asp:Content>
