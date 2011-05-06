@@ -15,13 +15,17 @@
   </TemplateData>
   <TemplateContent>
     <ProjectCollection>
-      <SolutionFolder Name="20 Host">
-        <ProjectTemplateLink ProjectName="Host.ConsoleApp">Host.ConsoleApp\Host.ConsoleApp.vstemplate</ProjectTemplateLink>
-        <ProjectTemplateLink ProjectName="Host.WebApp">Host.WebApp\Host.WebApp.vstemplate</ProjectTemplateLink>
+      <SolutionFolder Name="00 Documentation">
+        <ProjectTemplateLink ProjectName="Documentation">Documentation\Documentation.vstemplate</ProjectTemplateLink>
       </SolutionFolder>
       <SolutionFolder Name="10 Client">
         <ProjectTemplateLink ProjectName="Client.WebApp">Client.WebApp\Client.WebApp.vstemplate</ProjectTemplateLink>
-        <ProjectTemplateLink ProjectName="Client.WebMVC3">Client.WebMVC3\Client.WebMVC3.vstemplate</ProjectTemplateLink>
+        <ProjectTemplateLink ProjectName="Client.MvcApp">Client.MvcApp\Client.MvcApp.vstemplate</ProjectTemplateLink>
+        <ProjectTemplateLink ProjectName="Client.MvcApp.Tests">Client.MvcApp.Tests\Client.MvcApp.Tests.vstemplate</ProjectTemplateLink>
+      </SolutionFolder>
+      <SolutionFolder Name="20 Host">
+        <ProjectTemplateLink ProjectName="Host.ConsoleApp">Host.ConsoleApp\Host.ConsoleApp.vstemplate</ProjectTemplateLink>
+        <ProjectTemplateLink ProjectName="Host.WebApp">Host.WebApp\Host.WebApp.vstemplate</ProjectTemplateLink>
       </SolutionFolder>
       <SolutionFolder Name="40 Core">
         <ProjectTemplateLink ProjectName="Core.Contract">Core.Contract\Core.Contract.vstemplate</ProjectTemplateLink>
@@ -31,9 +35,6 @@
       <SolutionFolder Name="30 Web">
         <ProjectTemplateLink ProjectName="Web.Service">Web.Service\Web.Service.vstemplate</ProjectTemplateLink>
         <ProjectTemplateLink ProjectName="Web.Contract">Web.Contract\Web.Contract.vstemplate</ProjectTemplateLink>
-      </SolutionFolder>
-      <SolutionFolder Name="00 Documentation">
-        <ProjectTemplateLink ProjectName="Documentation">Documentation\Documentation.vstemplate</ProjectTemplateLink>
       </SolutionFolder>
     </ProjectCollection>
     <CustomParameters />
